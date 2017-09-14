@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Фестиваль ужасов | Пятница 13</title>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Style SCC -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+    <section id="main">
+      <div class="container">
+        <!-- Header row -->
+        <div class="row header-row">
+          <div class="col-xs-6">
+            <div class="logo">
+              <h2>Пятница <span>13</span></h2>
+            </div>
+            <div class="adress">
+              <p class>Красный проспект (161) <br>Начало в 19:00</p>
+            </div>
+          </div>
+          <div class="col-xs-6 phone">
+            <i class="fa fa-phone"></i>
+            <span class="phone-number">244-63-04</span>
+          </div>
+        </div><!-- /Header row -->
+        <!-- Loft row -->
+        <div class="row">
+          <div class="col-xs-12 loft">
+            <p>лофт-парк Подземка</p>
+          </div>
+        </div><!-- /Loft row -->
+        <!-- Main row -->
+        <div class="row main-row">
+          <div class="col-md-6">
+            <h1>Фестиваль <span>ужасов</span></h1>
+            <h3>Самая страшная ночь ещё впереди...</h3>
+            <span class="strip"></span>
+            <p>На данном мероприятии вас ожидают: <br>увлекательная horror-выставка; реалити-квест; <br>вечеринка Silent Hill; ночной кинопоказ.
+            </p>
+            <div class="btn-know">
+              <img id="btn-img" src="img/btn.png" alt="btn">
+              <img id="btn-hover-img" src="img/btn-hover.png" alt="btn">
+              <a id="know-btn" class="btn-a" href="#">Узнать подробнее</a>
+            </div>
+          </div>
+          <!-- Video -->
+          <div class="col-md-6 video-box">  
+            <div class="video videoWrapper js-videoWrapper">
+              <iframe class="videoIframe js-videoIframe" width="540" height="300" src="" frameborder="0" allowfullscreen data-src="https://www.youtube.com/embed/hgzzLIa-93c?autoplay=1& modestbranding=1&rel=0&hl=sv" allowTransparency="true"></iframe>
+              <img class="videoPoster poster js-videoPoster" src="img/video-poster.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div><!-- /Container -->
+    </section>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Hover script -->
+    <script>
+      $('#btn-img').css("opacity", "1");
+      $('#btn-hover-img').css("opacity", "0");
+      $('#know-btn').hover(
+        function(){
+          // $('#btn-img').css("opacity", "1");
+          $('#btn-hover-img').css("opacity", ".8");
+        },
+        function(){
+          // $('#btn-img').css("opacity", "1");
+          $('#btn-hover-img').css("opacity", "0");
+        });
+    </script>
+    <!-- Script for video -->
+    <script>
+      // poster frame click event
+      $(document).on('click','.js-videoPoster',function(ev) {
+        ev.preventDefault();
+        var $poster = $(this);
+        var $wrapper = $poster.closest('.js-videoWrapper');
+        videoPlay($wrapper);
+      });
+      // play the targeted video (and hide the poster frame)
+      function videoPlay($wrapper) {
+        var $iframe = $wrapper.find('.js-videoIframe');
+        var src = $iframe.data('src');
+        // hide poster
+        $wrapper.addClass('videoWrapperActive');
+        // add iframe src in, starting the video
+        $iframe.attr('src',src);
+      }
+    </script>
+  </body>
+</html>
