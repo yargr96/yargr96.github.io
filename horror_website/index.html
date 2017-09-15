@@ -41,7 +41,7 @@
           </div>
         </div><!-- /Header row -->
         <!-- Loft row -->
-        <div class="row">
+        <div class="row loft-row">
           <div class="col-xs-12 loft">
             <p>лофт-парк Подземка</p>
           </div>
@@ -54,22 +54,24 @@
             <span class="strip"></span>
             <p>На данном мероприятии вас ожидают: <br>увлекательная horror-выставка; реалити-квест; <br>вечеринка Silent Hill; ночной кинопоказ.
             </p>
-            <div class="btn-know">
-              <img id="btn-img" src="img/btn.png" alt="btn">
-              <img id="btn-hover-img" src="img/btn-hover.png" alt="btn">
-              <a id="know-btn" class="btn-a" href="#">Узнать подробнее</a>
+            <div class="btn-wrapper">
+              <div class="btn-know">
+                <img id="btn-img" src="img/btn.png" alt="btn">
+                <img id="btn-hover-img" src="img/btn-hover.png" alt="btn">
+                <a id="know-btn" class="btn-a" href="#">Узнать подробнее</a>
+              </div>
             </div>
           </div>
           <!-- Video -->
           <div class="col-md-6 video-box">  
-            <div class="video videoWrapper js-videoWrapper">
-              <iframe class="videoIframe js-videoIframe" width="540" height="300" src="" frameborder="0" allowfullscreen data-src="https://www.youtube.com/embed/hgzzLIa-93c?autoplay=1& modestbranding=1&rel=0&hl=sv" allowTransparency="true"></iframe>
-              <img class="videoPoster poster js-videoPoster" src="img/video-poster.png" alt="">
-            </div>
+            <iframe class="videoIframe js-videoIframe" width="540" height="300" src="" frameborder="0" allowfullscreen data-src="https://www.youtube.com/embed/hgzzLIa-93c?autoplay=1& modestbranding=1&rel=0&hl=sv" allowTransparency="true"></iframe>
+            <div class="leaf"><span>Листайте вниз <i class="fa fa-long-arrow-right"></i></span></div>
           </div>
-        </div>
+
+        </div><!-- /Main row -->
       </div><!-- /Container -->
     </section>
+    <footer></footer>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -90,7 +92,7 @@
         });
     </script>
     <!-- Script for video -->
-    <script>
+    <!-- <script>
       // poster frame click event
       $(document).on('click','.js-videoPoster',function(ev) {
         ev.preventDefault();
@@ -107,6 +109,15 @@
         // add iframe src in, starting the video
         $iframe.attr('src',src);
       }
-    </script>
+    </script> -->
   </body>
 </html>
+
+
+          <!-- Video
+          <div class="col-md-6 video-box">  
+            <div class="video videoWrapper js-videoWrapper">
+              <iframe class="videoIframe js-videoIframe" width="540" height="300" src="" frameborder="0" allowfullscreen data-src="https://www.youtube.com/embed/hgzzLIa-93c?autoplay=1& modestbranding=1&rel=0&hl=sv" allowTransparency="true"></iframe>
+              <img class="videoPoster poster js-videoPoster" src="img/video-poster.png" alt="">
+            </div>
+          </div> -->
