@@ -140,6 +140,7 @@ body {
 		font-size: 56px;
 		color: #fff;
 		margin: 0;
+		letter-spacing: -2.5px;
 		span {
 			color: @base-red;
 		}
@@ -148,7 +149,7 @@ body {
 		.nova-reg;
 		font-size: 22px;
 		color: #fff;
-		margin-top: 20px;
+		margin-top: 10px;
 		margin-bottom: 0;
 	}
 	span.strip {
@@ -409,8 +410,14 @@ body {
 	.placeholder {
 		height: 20px;
 	}
+	#main {
+		background-position: center left;
+	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+	#main {
+		background-position: center left;
+	}
 	.video-box {
 		text-align: center;
 	}
@@ -426,10 +433,28 @@ body {
 	.placeholder {
 		height: 20px;
 	}
+	.container {
+		padding: 5vh 5vw;
+	}
+	.header-row {
+		margin-top: 0;
+	}
 }
 @media (min-width: 1200px) and (max-width: 1600px) {
+	#main {
+		max-height: 100vh;
+	}
+	.loft-row {
+		margin-top: 90px;
+	}
 	.btn-wrapper {
 		text-align: left !important;
+	}
+	.container {
+		padding: 5vh 5vw;
+	}
+	.header-row {
+		margin-top: 0;
 	}
 }
 @media (min-width: 1601px) {
