@@ -81,6 +81,15 @@
 .header-row .phone {
   text-align: right;
 }
+.header-row .phone a {
+  color: #fff;
+}
+.header-row .phone a:hover {
+  text-decoration: none;
+}
+.header-row .phone a:focus {
+  text-decoration: none;
+}
 .header-row i {
   font-size: 26px;
   color: #ff1716;
