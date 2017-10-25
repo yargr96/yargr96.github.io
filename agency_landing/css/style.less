@@ -1,0 +1,209 @@
+/* ====================== Fonts ======================*/
+@font-face {
+	font-family: 'Conv_Fontfabric - MullerBold';
+	src: url('fonts/Fontfabric - MullerBold.eot');
+	src: local('☺'), url('fonts/Fontfabric - MullerBold.woff') format('woff'), url('fonts/Fontfabric - MullerBold.ttf') format('truetype'), url('fonts/Fontfabric - MullerBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_cinzel-bold_[allfont.ru]';
+	src: url('fonts/cinzel-bold_[allfont.ru].eot');
+	src: local('☺'), url('fonts/cinzel-bold_[allfont.ru].woff') format('woff'), url('fonts/cinzel-bold_[allfont.ru].ttf') format('truetype'), url('fonts/cinzel-bold_[allfont.ru].svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_Stem-Medium';
+	src: url('fonts/Stem-Medium.eot');
+	src: local('☺'), url('fonts/Stem-Medium.woff') format('woff'), url('fonts/Stem-Medium.ttf') format('truetype'), url('fonts/Stem-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_Stem-Regular';
+	src: url('fonts/Stem-Regular.eot');
+	src: local('☺'), url('fonts/Stem-Regular.woff') format('woff'), url('fonts/Stem-Regular.ttf') format('truetype'), url('fonts/Stem-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_Stem-Thin';
+	src: url('fonts/Stem-Thin.eot');
+	src: local('☺'), url('fonts/Stem-Thin.woff') format('woff'), url('fonts/Stem-Thin.ttf') format('truetype'), url('fonts/Stem-Thin.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_Oraqle Script';
+	src: url('fonts/Oraqle Script.eot');
+	src: local('☺'), url('fonts/Oraqle Script.woff') format('woff'), url('fonts/Oraqle Script.ttf') format('truetype'), url('fonts/Oraqle Script.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_Stem-Bold';
+	src: url('fonts/Stem-Bold.eot');
+	src: local('☺'), url('fonts/Stem-Bold.woff') format('woff'), url('fonts/Stem-Bold.ttf') format('truetype'), url('fonts/Stem-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/* ====================== Font Classes ======================*/
+.muller {
+	font-family: 'Conv_Fontfabric - MullerBold';
+}
+.stem-reg {
+	font-family: 'Conv_Stem-Regular';
+}
+.stem-thin {
+	font-family: 'Conv_Stem-Thin';
+}
+.stem-bold {
+	font-family: 'Conv_Stem-Bold';
+}
+.stem-med {
+	font-family: 'Conv_Stem-Medium';
+}
+.oracle {
+	font-family: 'Conv_Oraqle Script';
+}
+.cinzel {
+	font-family: 'Conv_cinzel-bold_[allfont.ru]';
+}
+/* ====================== Base colors ======================*/
+@base-black: #141414;
+@base-blue: #01a7e3;
+@base-gray: #a3a3a3;
+
+/* ====================== Base settings ======================*/
+html, body {
+	background-color: @base-black;
+}
+a {
+	color: #fff;
+	&:hover, &:focus {
+		text-decoration: none;
+		color: #fff;
+	}
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+li {
+	display: inline-block;
+}
+
+/* ====================== Main settings ======================*/
+.main {
+	padding: 50px 0;
+	min-height: 100vh;
+	position: relative;
+	width: 100%;
+}
+.nav-row {
+	height: 67px;
+	.menu-collumn {
+		line-height: 67px;
+		.main-menu {
+			.menu-item{
+				margin: 0 5px;
+				&-a {
+					.stem-med;
+					color: #d0d0d0;
+					border: 1px solid transparent;
+					border-radius: 50px;
+					padding: 14px 22px;
+					transition: all .3s;
+					&:hover {
+						border: 1px solid #373737;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+	.tel-collumn {
+		.tel-number {
+			.stem-bold;
+			font-size: 18px;
+			line-height: 2;
+			.tel-span {
+				color: @base-blue;
+				font-size: 20px;
+			}
+		}
+		.request {
+			.stem-reg;
+			position: relative;
+			i {
+				border: 1px solid #373737;
+				border-radius: 50px;
+				padding: 7px 9px;
+				margin-right: 8px;
+				position: absolute;
+				left: -42px;
+				top: -5px;
+				transition: all .3s;
+			}
+			&:hover i {
+				padding: 10px 12px;
+				left: -45px;
+				top: -8px;
+				color: @base-blue;
+				text-shadow: -2px 2px 2px rgba(34, 154, 255, 0.69);
+			}
+		}
+	}
+}
+.main-content-row {
+	margin-top: 125px;
+	.main-content {
+		h1 {
+			.stem-bold;
+			font-size: 36px;
+			color: #fff;
+			line-height: 1.389;
+			margin-top: 0;
+			margin-bottom: 0;
+			span {
+				color: @base-blue;
+			}
+		}
+		h2 {
+			.stem-reg;
+			color: @base-gray;
+			font-size: 14px;
+			line-height: 1.786;
+			margin-top: 15px;
+			margin-bottom: 53px;
+		}
+		.calc-btn {
+			.stem-reg;
+			font-size: 12px;
+			letter-spacing: 1px;
+			color: #dcdcdc;
+			padding: 19px 32px;
+			border: 1px solid #373737;
+			border-radius: 50px;
+			transition: all .3s;
+			&:hover {
+				background-color: @base-blue;
+				border: 1px solid transparent;
+			}
+		}
+	}
+}
+.wrapper {
+
+}
+.contacts-row {
+
+	.socials {
+
+	}
+	.watch {
+
+	}
+}
