@@ -98,9 +98,10 @@ li {
 /* ====================== Main settings ======================*/
 .main {
 	padding: 50px 0;
-	min-height: 100vh;
+	height: 100vh;
 	position: relative;
 	width: 100%;
+	min-height: 668px; 
 }
 .nav-row {
 	height: 67px;
@@ -138,6 +139,7 @@ li {
 		.request {
 			.stem-reg;
 			position: relative;
+			border-left: 10px solid transparent;
 			i {
 				border: 1px solid #373737;
 				border-radius: 50px;
@@ -360,6 +362,7 @@ li {
 	top: 0;
 	width: 1px;
 	height: 100vh;
+	// min-height: 768px;
 	background-color: #222;
 	&-1 {
 		left: 14px;
@@ -369,6 +372,15 @@ li {
 	}
 	&-3 {
 		left: 50%;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 55px;
+			left: -11px;
+			width: 23px;
+			height: 67px;
+			background-image: url(../img/mouse.png);
+		}
 	}
 	&-4 {
 		right: 153px;
