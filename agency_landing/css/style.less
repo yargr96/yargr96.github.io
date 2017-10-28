@@ -96,15 +96,20 @@ li {
 }
 
 /* ====================== Main settings ======================*/
+
+/* Главный блок */
 .main {
 	padding: 50px 0;
 	height: 100vh;
 	position: relative;
+	z-index: 3;
 	width: 100%;
 	min-height: 668px; 
 }
+/* Полоска навигации */
 .nav-row {
 	height: 67px;
+	// Колонка меню
 	.menu-collumn {
 		line-height: 67px;
 		.main-menu {
@@ -112,6 +117,7 @@ li {
 				margin: 0 5px;
 				&-a {
 					.stem-reg;
+					font-size: 12px;
 					color: #d0d0d0;
 					border: 1px solid transparent;
 					border-radius: 50px;
@@ -126,6 +132,7 @@ li {
 			}
 		}
 	}
+	// Колонка с телефоном
 	.tel-collumn {
 		.tel-number {
 			.stem-bold;
@@ -136,6 +143,7 @@ li {
 				font-size: 20px;
 			}
 		}
+		// Заказать звонок
 		.request {
 			.stem-reg;
 			position: relative;
@@ -160,6 +168,7 @@ li {
 		}
 	}
 }
+// Полоска с основным контентом
 .main-content-row {
 	margin-top: 125px;
 	.main-content {
@@ -182,6 +191,7 @@ li {
 			margin-top: 15px;
 			margin-bottom: 53px;
 		}
+		// Кнопка рассчитать стоимость
 		.calc-btn {
 			border: 1px solid #393939;
 			display: inline-block;
@@ -274,13 +284,13 @@ li {
 		}
 	}
 }
-
+// Контакты
 .contacts {
 	width: 100%;
 	position: absolute;
 	bottom: 50px;left: 0;	
 	&-row {
-		
+		// Соц сети
 		.socials {
 			letter-spacing: 3.4px;
 			font-size: 16px;
@@ -303,6 +313,7 @@ li {
 				font-size: 26px;
 			}
 		}
+		// Смотреть
 		.watch {
 			padding-right: 27px;
 			a {
@@ -336,31 +347,18 @@ li {
 		}
 	}
 }
-/* .header-line {
+// Рисунок мыши
+.mouse {
 	position: absolute;
-    top: 0;
-    height: 100%;
-    width: 1px;
-    background: rgba(255,255,255,0.1);
-    &-1 {
-    	left: 0;
-    }
-} */
-/* .line-container {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	left: 0;
-	top: 0;
-	.container {
-		height: 100%;
-		position: relative;
-	}
-} */
-
+	left: 184px;
+	top: -35px;
+}
+// Контейнер для линий
 .line-container {
 	position: relative;
+	z-index: 2;
 }
+// Линии
 .line {
 	position: absolute;
 	
@@ -368,7 +366,9 @@ li {
 	width: 1px;
 	height: 100vh;
 	// min-height: 768px;
-	background-color: #222;
+	background-color: #fff;
+	opacity: .05;
+	z-index: 2;
 	&-1 {
 		left: 14px;
 	}
@@ -385,6 +385,7 @@ li {
 			width: 23px;
 			height: 67px;
 			background-image: url(../img/mouse.png);
+			opacity: 1;
 		}
 	}
 	&-4 {
@@ -392,5 +393,66 @@ li {
 	}
 	&-5 {
 		right: 15px;
+	}
+}
+/********* Слайдер *********/
+.slider {
+	&-buttons {
+		&_item {
+			&-1 {
+
+			}
+			&-2 {
+
+			}
+			&-3 {
+
+			}
+			&-4 {
+
+			}
+			&-5 {
+
+			}
+			&-round {
+
+			}
+		}
+	}
+}
+/* Контейнер для фона */
+.background-container {
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	z-index: 1;
+	&_item {
+		background-size: cover;
+		background-position: center;
+		height: 100%;
+		width: 100%;
+		&-1 {
+			display: none;
+			background-image: url(../img/slides/1.png);
+		}
+		&-2 {
+			display: none;
+			background-image: url(../img/slides/2.png);
+		}
+		&-3 {
+			display: none;
+			background-image: url(../img/slides/3.png);
+		}
+		&-4 {
+			display: none;
+			background-image: url(../img/slides/4.png);
+		}
+		&-5 {
+			display: none;
+			background-image: url(../img/slides/5.png);
+		}
+		&-active {
+			display: block;
+		}
 	}
 }
