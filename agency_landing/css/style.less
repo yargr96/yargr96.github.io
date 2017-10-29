@@ -398,7 +398,29 @@ li {
 /********* Слайдер *********/
 .slider {
 	&-buttons {
+		position:absolute;
+		right:65px;
+		bottom:45px;
+		margin-right:-9px;
 		&_item {
+			position:relative;
+			display:inline-block;
+			vertical-align:top;
+			width:22px;
+			height:22px;
+			cursor:pointer;
+			margin:0 4px;
+			& canvas {
+				opacity:.0;visibility:hidden;
+				-webkit-transition:opacity .3s ease-in-out,visibility .3s ease-in-out;
+				-o-transition:opacity .3s ease-in-out,visibility .3s ease-in-out;
+				transition:opacity .3s ease-in-out,visibility .3s ease-in-out;
+			}
+			&:hover {
+				.slider-buttons_item-round {
+					background:@base-blue;
+				}
+			}
 			&-1 {
 
 			}
@@ -414,8 +436,31 @@ li {
 			&-5 {
 
 			}
+			&_active {
+				cursor: default;
+				& canvas {
+					opacity:1.0;
+					visibility:visible;
+				}
+				&:hover {
+					.slider-buttons_item-round {
+						background:@base-blue;
+					}
+				}
+			}
 			&-round {
-
+				position:absolute;
+				left:50%;
+				top:50%;
+				margin-left:-3px;
+				margin-top:-3px;
+				width:6px;
+				height:6px;
+				background:rgba(255,255,255,0.2);
+				-webkit-border-radius:6px;-moz-border-radius:6px;
+				border-radius:6px;-webkit-transition:background .3s ease-in-out;
+				-o-transition:background .3s ease-in-out;
+				transition:background .3s ease-in-out;
 			}
 		}
 	}
@@ -424,6 +469,7 @@ li {
 .background-container {
 	position: absolute;
 	height: 100vh;
+	min-height: 768px;
 	width: 100%;
 	z-index: 1;
 	&_item {
@@ -451,7 +497,7 @@ li {
 			display: none;
 			background-image: url(../img/slides/5.png);
 		}
-		&-active {
+		&_active {
 			display: block;
 		}
 	}

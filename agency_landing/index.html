@@ -29,7 +29,7 @@
       <div class="background-container_item background-container_item-2"></div>
       <div class="background-container_item background-container_item-3"></div>
       <div class="background-container_item background-container_item-4"></div>
-      <div class="background-container_item background-container_item-5 background-container_item-active"></div>
+      <div class="background-container_item background-container_item-5 background-container_item_active"></div>
     </div>
     <div class="container line-container">
         <div class="line line-1"></div>
@@ -69,7 +69,7 @@
           </div>
           <div class="col-md-6 slider">
             <div class="slider-buttons">
-              <div class="slider-buttons_item slider-buttons_item-1" data-id="1">
+              <div class="slider-buttons_item slider-buttons_item_active slider-buttons_item-1" data-id="1">
                 <div class="slider-buttons_item-round"></div>
               </div>
               <div class="slider-buttons_item slider-buttons_item-2" data-id="2">
@@ -119,7 +119,69 @@
     </section>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Lazy load -->
+    <script src="js/jquery.lazyload.min.js"></script>
+    <!-- Circle progress -->
+    <script src="js/circle-progress.min.js"></script>
+    <script>
+      var i = 10000;
+      var c = false;
+      var e = [];
+      var b = 0;
+      $(".slider-buttons_item").circleProgress({
+          value: 0,
+          size: 22,
+          thickness: 3,
+          fill: {
+              color: "#01a7e3"
+          },
+          emptyFill: "rgba(0, 0, 0, .0)",
+          animation: {
+              duration: i
+          }
+      });
+      $(".slider-buttons_item_active").circleProgress("value", 1);
+      $(document).on('click', ".slider-buttons_item", function() {
+        $('.background-container_item_active').removeClass('background-container_item_active');
+        $('.slider-buttons_item_active').removeClass('slider-buttons_item_active');
+        $(".background-container_item-" + $(this).attr("data-id")).addClass("background-container_item_active");
+        $(this).addClass('slider-buttons_item_active');
+        $(".slider-buttons_item").circleProgress("animation", {
+            duration: 500
+        });
+        $(".slider-buttons_item").circleProgress("value", 0);
+        $(".slider-buttons_item_active").circleProgress("animation", {
+            duration: i
+        });
+        $(".slider-buttons_item_active").circleProgress("value", 1);
+        for (var m = 0; m < e.length; m++) {
+            clearTimeout(e[m]);
+        }
+        e = [];
+        e.push(setTimeout(function() {
+                h();
+            },
+            i));
+      })
+      function h() {
+          if (!c) {
+              var m = ($(".slider-buttons_item_active").next().length > 0 ? $(".slider-buttons_item_active").next() : $(".slider-buttons_item:first"));
+              $(m).click();
+          }
+          e.push(setTimeout(function() {
+                  h();
+              },
+              i));
+      }
+      e.push(setTimeout(function() {
+              h();
+          },
+          i));
+    </script>
+    <!-- Main script -->
+    <!-- <script src="js/main.js"></script> -->
   </body>
 </html>
