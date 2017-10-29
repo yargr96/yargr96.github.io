@@ -395,6 +395,67 @@ li {
 		right: 15px;
 	}
 }
+//Круги
+.round {
+	position: absolute;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	opacity: .03;
+	&-1{
+		height: 144px;
+		width: 144px;
+		left: 345px;
+		top: 197px;
+	}
+	&-2{
+		height: 94px;
+		width: 94px;
+		left: 230px;
+		top: 60px;
+	}
+	&-3{
+		width: 67px;
+		height: 67px;
+		left: 200px;
+		top: 580px;
+	}
+	&-4{
+		height: 28px;
+		width: 28px;
+		top: 186px;
+		right: 200px;
+	}
+	&-5{
+		height: 215px;
+		width: 215px;
+		right: -115px;
+		top: 280px;
+	}
+	&-6{
+		width: 93px;
+		height: 93px;
+		right: 55px;
+		top: 280px;
+	}
+	&-7{
+		width: 142px;
+		height: 142px;
+		right: -5px;
+		top: 390px;
+	}
+	&-8{
+		height: 20px;
+		width: 20px;
+		right: 174px;
+		top: 460px;
+	}
+	&-9{
+		height: 38px;
+		width: 38px;
+		right: 135px;
+		top: 375px;
+	}
+}
 /********* Слайдер *********/
 .slider {
 	&-buttons {
@@ -403,7 +464,7 @@ li {
 		bottom:45px;
 		margin-right:-9px;
 		&_item {
-			position:relative;
+			position:absolute;
 			display:inline-block;
 			vertical-align:top;
 			width:22px;
@@ -422,19 +483,54 @@ li {
 				}
 			}
 			&-1 {
-
+				right: -22px;
+				top: 313px;
+				&:after {
+					content: '01';
+					position: absolute;
+					left: 30px;
+					top: 1px;
+				}
 			}
 			&-2 {
-
+				right: 32px;
+				top: 279px;
+				&:after {
+					content: '02';
+					position: absolute;
+					left: 30px;
+					top: 1px;
+				}
 			}
 			&-3 {
-
+				right: 69px;
+				top: 235px;
+				&:after {
+					content: '03';
+					position: absolute;
+					left: 30px;
+					top: 1px;
+				}
 			}
 			&-4 {
-
+				right: 82px;
+				top: 185px;
+				&:after {
+					content: '04';
+					position: absolute;
+					left: 30px;
+					top: 1px;
+				}
 			}
 			&-5 {
-
+				right: 67px;
+				top: 129px;
+				&:after {
+					content: '05';
+					position: absolute;
+					left: 30px;
+					top: 1px;
+				}
 			}
 			&_active {
 				cursor: default;
