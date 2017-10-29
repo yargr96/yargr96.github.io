@@ -489,7 +489,10 @@ li {
 					content: '01';
 					position: absolute;
 					left: 30px;
-					top: 1px;
+					top: 5px;
+					.stem-bold;
+					font-size: 10px;
+					color: @base-gray;
 				}
 			}
 			&-2 {
@@ -499,7 +502,10 @@ li {
 					content: '02';
 					position: absolute;
 					left: 30px;
-					top: 1px;
+					top: 5px;
+					.stem-bold;
+					font-size: 10px;
+					color: @base-gray;
 				}
 			}
 			&-3 {
@@ -509,7 +515,10 @@ li {
 					content: '03';
 					position: absolute;
 					left: 30px;
-					top: 1px;
+					top: 5px;
+					.stem-bold;
+					font-size: 10px;
+					color: @base-gray;
 				}
 			}
 			&-4 {
@@ -519,7 +528,10 @@ li {
 					content: '04';
 					position: absolute;
 					left: 30px;
-					top: 1px;
+					top: 5px;
+					.stem-bold;
+					font-size: 10px;
+					color: @base-gray;
 				}
 			}
 			&-5 {
@@ -529,10 +541,19 @@ li {
 					content: '05';
 					position: absolute;
 					left: 30px;
-					top: 1px;
+					top: 5px;
+					.stem-bold;
+					font-size: 10px;
+					color: @base-gray;
 				}
 			}
 			&_active {
+				&:after {
+					color: @base-blue;
+				}
+				.slider-buttons_item-round {
+						background:@base-blue;
+					}
 				cursor: default;
 				& canvas {
 					opacity:1.0;
@@ -552,7 +573,7 @@ li {
 				margin-top:-3px;
 				width:6px;
 				height:6px;
-				background:rgba(255,255,255,0.2);
+				background:@base-gray;
 				-webkit-border-radius:6px;
 				-moz-border-radius:6px;
 				border-radius:6px;
