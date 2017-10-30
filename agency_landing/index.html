@@ -168,15 +168,46 @@
           </div>
         </div>
       </div>
-      <!-- <div class="line-container">
-        <div class="container">
-          <div class="header-line header-line-1"></div>
-        </div>
-      </div> -->
-      
     </header>
-    <section class="portfolio" style="background-color: #aeaeae; height: 50px">
-      Ctrwbz
+    <section id="portfolio" class="portfolio">
+      <div class="portfolio_item portfolio_item-1">
+        <div class="portfolio_item_cover portfolio-item_cover-1">
+          <h3 class="portfolio_item_cover_header">Производство скиналей <br>из Беларуси</h3>
+          <a class="portfolio_item_cover_btn" href="#">
+            <div class="btn_hover"></div>
+            <div class="btn_text">Нажмите для просмотра</div></a>
+        </div>
+      </div>
+      <div class="portfolio_item portfolio_item-2">
+        <div class="portfolio_item_cover portfolio-item_cover-2">
+          <h3 class="portfolio_item_cover_header">Производство скиналей из <br>Беларуси</h3>
+          <a class="portfolio_item_cover_btn" href="#">Нажмите для просмотра</a>
+        </div>
+      </div>
+      <div class="portfolio_item portfolio_item-3">
+        <div class="portfolio_item_cover portfolio-item_cover-3">
+          <h3 class="portfolio_item_cover_header">Производство скиналей из <br>Беларуси</h3>
+          <a class="portfolio_item_cover_btn" href="#">Нажмите для просмотра</a>
+        </div>
+      </div>
+      <div class="portfolio_item portfolio_item-4">
+        <div class="portfolio_item_cover portfolio-item_cover-4">
+          <h3 class="portfolio_item_cover_header">Производство скиналей из <br>Беларуси</h3>
+          <a class="portfolio_item_cover_btn" href="#">Нажмите для просмотра</a>
+        </div>
+      </div>
+      <div class="portfolio_item portfolio_item-5">
+        <div class="portfolio_item_cover portfolio-item_cover-5">
+          <h3 class="portfolio_item_cover_header">Производство скиналей из <br>Беларуси</h3>
+          <a class="portfolio_item_cover_btn" href="#">Нажмите для просмотра</a>
+        </div>
+      </div>
+      <div class="portfolio_item portfolio_item-6">
+        <div class="portfolio_item_cover portfolio-item_cover-5">
+          <h3 class="portfolio_item_cover_header">Производство скиналей из <br>Беларуси</h3>
+          <a class="portfolio_item_cover_btn" href="#">Нажмите для просмотра</a>
+        </div>
+      </div>
     </section>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -245,9 +276,32 @@
                 h();
             },
             i));
+        var k = 993;
+        var j = 1300;
+        var a = k;
+        var g = function() {
+            var n = $(document).width() / j;
+            var m = k * n;
+            a = m;
+            $(".portfolio").height(m);
+        };
+        var f = function() {
+            if ($(".b-block_cases-more").visible(true)) {
+                $(".b-block_cases-more").addClass("b-block_cases-more_hidden");
+            }
+        };
+        g();
+        $(window).resize(function(m) {
+            g();
+        });
+        f();
+        $(window).scroll(function(m) {
+            f();
+        });
       })
       
     </script>
+
     <!-- Main script -->
     <!-- <script src="js/main.js"></script> -->
   </body>

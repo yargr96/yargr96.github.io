@@ -715,6 +715,81 @@ hr {
 	}
 }
 
+/* ====================== Portfolio Section ======================*/
+.portfolio {
+	height: 993px;
+	position: relative;
+	&_item {
+		background-size: cover;
+		position: absolute;
+		&-1 {
+			width: 34%;
+			height: 44%;
+			top: 0;
+			left: 0;
+			background-image: url(../img/cases/1.jpg);			
+		}
+		&-2 {
+			width: 34%;
+			height: 56.8%;
+			top: 0;
+			left: 34%;
+			background-image: url(../img/cases/2.jpg);
+		}
+		&-3 {
+			width: 32%;
+			height: 38.4%;
+			top: 0;
+			left: 68%;
+			background-image: url(../img/cases/3.jpg);
+		}
+		&-4 {
+			top: 44%;
+			left: 0;
+			width: 34%;
+			height: 56%;
+			background-image: url(../img/cases/4.jpg);
+		}
+		&-5 {
+			top: 56.8%;
+			left: 34%;
+			width: 34%;
+			height: 43.2%;
+			background-image: url(../img/cases/5.jpg);
+		}
+		&-6 {
+			width: 32%;
+			height: 61.6%;
+			left: 68%;
+			top: 38.4%;
+			background-image: url(../img/cases/6.jpg);
+		}
+		&:hover {
+			.portfolio_item_cover {
+				visibility: visible;
+			}
+		}
+		&_cover {
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: rgba(0, 0, 0, .5);
+			visibility: hidden;
+			&_header {
+				.stem-bold;
+				font-size: 22px;
+				color: #fff;
+				text-align: center;
+			}
+			&_btn {
+
+			}
+		}
+	}
+}
+
 /* ====================== Media Queries ======================*/
 @media (max-width: 350px) {
 	
