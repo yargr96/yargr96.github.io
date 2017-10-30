@@ -25,11 +25,14 @@
   </head>
   <body>
     <div class="background-container">
-      <div class="background-container_item background-container_item-1 background-container_item_active"></div>
+      <div class="background-container_item background-container_item-1 background-container_item_active">
+      </div>
       <div class="background-container_item background-container_item-2"></div>
       <div class="background-container_item background-container_item-3"></div>
       <div class="background-container_item background-container_item-4"></div>
       <div class="background-container_item background-container_item-5"></div>
+      <div class="background-container_item background-container_item-6"></div>
+      <div class="background-container_item background-container_item-7"></div>
     </div>
     <div class="container line-container">
         <div class="line line-1"></div>
@@ -37,18 +40,24 @@
         <div class="line line-3"></div>
         <div class="line line-4"></div>
         <div class="line line-5"></div>
-        <div class="round round-1"></div>
-        <div class="round round-2"></div>
-        <div class="round round-3"></div>
-        <div class="round round-4"></div>
-        <div class="round round-5"></div>
-        <div class="round round-6"></div>
-        <div class="round round-7"></div>
-        <div class="round round-8"></div>
-        <div class="round round-9"></div>
+        <div class="round-container">
+          <div class="round round-1"></div>
+          <div class="round round-2"></div>
+          <div class="round round-3"></div>
+          <div class="round round-4"></div>
+          <div class="round round-5"></div>
+          <div class="round round-6"></div>
+          <div class="round round-7"></div>
+          <div class="round round-8"></div>
+          <div class="round round-9"></div>
+        </div>
     </div>
     <header class="main">
-      
+      <div class="lang">
+        <a class="lang_a lang_a_active" href="#">Rus</a>
+        <span>/</span>
+        <a class="lang_a" href="#">Eng</a>
+      </div>
       <div class="container">
         <div class="row nav-row">
           <div class="col-md-3">
@@ -93,6 +102,52 @@
               <div class="slider-buttons_item slider-buttons_item-5" data-id="5">
                 <div class="slider-buttons_item-round"></div>
               </div>
+              <div class="slider-buttons_item slider-buttons_item-6" data-id="6">
+                <div class="slider-buttons_item-round"></div>
+              </div>
+              <div class="slider-buttons_item slider-buttons_item-7" data-id="7">
+                <div class="slider-buttons_item-round"></div>
+              </div>
+            </div>
+            <div class="slider-content">
+              <div class="slider-content_friday">
+                <h2>Пятница 13</h2>
+              </div>
+              <div class="slider-content_item slider-content_item_active slider-content_item-1">
+                <h3>Promohub</h3>
+                <hr>
+                <h4>Landing-page</h4>
+              </div>
+              <div class="slider-content_item slider-content_item-2">
+                <h3>Расцветай</h3>
+                <hr>
+                <h4>Упаковка франшизы</h4>
+              </div>
+              <div class="slider-content_item slider-content_item-3">
+                <h3>Эпитал</h3>
+                <hr>
+                <h4>Landing-page</h4>
+              </div>
+              <div class="slider-content_item slider-content_item-4">
+                <h3>FirstGame</h3>
+                <hr>
+                <h4>Landing-page</h4>
+              </div>
+              <div class="slider-content_item slider-content_item-5">
+                <h3>Friday 13</h3>
+                <hr>
+                <h4>Мероприятие</h4>
+              </div>
+              <div class="slider-content_item slider-content_item-6">
+                <h3>Promohub</h3>
+                <hr>
+                <h4>Мероприятие</h4>
+              </div>
+              <div class="slider-content_item slider-content_item-7">
+                <h3>Расцветай</h3>
+                <hr>
+                <h4>Мероприятие</h4>
+              </div>
             </div>
           </div>
         </div> <!-- /content row -->
@@ -100,17 +155,14 @@
       <div class="contacts">
         <div class="container ">
           <div class="row contacts-row">
-            <div class="col-md-4 socials">
+            <div class="col-md-6 socials">
               <a href="#"><i class="fa fa-behance"></i></a>
               <span>/</span>
               <a href="#"><i class="fa fa-vk"></i></a>
               <span>/</span>
               <a href="#"><i class="fa fa-instagram"></i></a>
             </div>
-            <div class="col-md-4">
-              <img class="mouse" src="img/mouse.png" alt="mouse">
-            </div>
-            <div class="col-md-4 watch text-right">
+            <div class="col-md-6 watch text-right">
               <a href="#">Смотреть</a>
             </div>
           </div>
@@ -124,7 +176,7 @@
       
     </header>
     <section class="portfolio" style="background-color: #aeaeae; height: 50px">
-
+      Ctrwbz
     </section>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -157,8 +209,10 @@
         $(".slider-buttons_item_active").circleProgress("value", 1);
         $(document).on('click', ".slider-buttons_item", function() {
           $('.background-container_item_active').removeClass('background-container_item_active');
+          $('.slider-content_item_active').removeClass('slider-content_item_active');
           $('.slider-buttons_item_active').removeClass('slider-buttons_item_active');
           $(".background-container_item-" + $(this).attr("data-id")).addClass("background-container_item_active");
+          $(".slider-content_item-" + $(this).attr("data-id")).addClass("slider-content_item_active");
           $(this).addClass('slider-buttons_item_active');
           $(".slider-buttons_item").circleProgress("animation", {
               duration: 500

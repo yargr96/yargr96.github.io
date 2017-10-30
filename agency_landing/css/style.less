@@ -78,6 +78,7 @@
 /* ====================== Base settings ======================*/
 html, body {
 	background-color: @base-black;
+
 }
 a {
 	color: #fff;
@@ -94,6 +95,10 @@ ul {
 li {
 	display: inline-block;
 }
+hr {
+	height: 1px;
+	border: none;
+}
 
 /* ====================== Main settings ======================*/
 
@@ -104,7 +109,31 @@ li {
 	position: relative;
 	z-index: 3;
 	width: 100%;
-	min-height: 668px; 
+	min-height: 675px;
+	.lang {
+		position: absolute;
+		right: -27px;
+		top: 160px;
+		border: 1px solid rgba(255, 255, 255, .05);
+		padding: 10px 20px;
+		transform: rotate(90deg);
+		&_a {
+			text-transform: uppercase;
+			.stem-med;
+			font-size: 10px;
+			color: #9d9d9d;
+			&_active {
+				.stem-reg;
+				font-size: 12px;
+				color: #fff;
+			}
+		}
+		span {
+			.stem-reg;
+			font-size: 10px;
+			color: #9d9d9d;
+		}
+	}
 }
 /* Полоска навигации */
 .nav-row {
@@ -118,7 +147,7 @@ li {
 				&-a {
 					.stem-reg;
 					font-size: 12px;
-					color: #d0d0d0;
+					color: #c1c1c1;
 					border: 1px solid transparent;
 					border-radius: 50px;
 					padding: 14px 22px;
@@ -347,16 +376,14 @@ li {
 		}
 	}
 }
-// Рисунок мыши
-.mouse {
-	position: absolute;
-	left: 184px;
-	top: -35px;
-}
+
 // Контейнер для линий
 .line-container {
 	position: relative;
 	z-index: 2;
+	// overflow: hidden;
+	/* height: 100vh;
+	min-height: 760px; */
 }
 // Линии
 .line {
@@ -365,9 +392,8 @@ li {
 	top: 0;
 	width: 1px;
 	height: 100vh;
-	// min-height: 768px;
-	background-color: #fff;
-	opacity: .05;
+	min-height: 675px;
+	background-color: rgba(255,255,255,0.05);
 	z-index: 2;
 	&-1 {
 		left: 14px;
@@ -385,7 +411,6 @@ li {
 			width: 23px;
 			height: 67px;
 			background-image: url(../img/mouse.png);
-			opacity: 1;
 		}
 	}
 	&-4 {
@@ -396,6 +421,13 @@ li {
 	}
 }
 //Круги
+.round-container {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	min-height: 675px;
+	overflow: hidden;
+}
 .round {
 	position: absolute;
 	border: 1px solid #fff;
@@ -464,6 +496,14 @@ li {
 		bottom:45px;
 		margin-right:-9px;
 		&_item {
+			&:after {
+				position: absolute;
+				left: 30px;
+				top: 5px;
+				.stem-bold;
+				font-size: 10px;
+				color: @base-gray;
+			}
 			position:absolute;
 			display:inline-block;
 			vertical-align:top;
@@ -481,18 +521,15 @@ li {
 				.slider-buttons_item-round {
 					background:@base-blue;
 				}
+				&:after {
+					color: @base-blue;
+				}
 			}
 			&-1 {
 				right: -22px;
 				top: 313px;
 				&:after {
 					content: '01';
-					position: absolute;
-					left: 30px;
-					top: 5px;
-					.stem-bold;
-					font-size: 10px;
-					color: @base-gray;
 				}
 			}
 			&-2 {
@@ -500,12 +537,6 @@ li {
 				top: 279px;
 				&:after {
 					content: '02';
-					position: absolute;
-					left: 30px;
-					top: 5px;
-					.stem-bold;
-					font-size: 10px;
-					color: @base-gray;
 				}
 			}
 			&-3 {
@@ -513,12 +544,6 @@ li {
 				top: 235px;
 				&:after {
 					content: '03';
-					position: absolute;
-					left: 30px;
-					top: 5px;
-					.stem-bold;
-					font-size: 10px;
-					color: @base-gray;
 				}
 			}
 			&-4 {
@@ -526,25 +551,27 @@ li {
 				top: 185px;
 				&:after {
 					content: '04';
-					position: absolute;
-					left: 30px;
-					top: 5px;
-					.stem-bold;
-					font-size: 10px;
-					color: @base-gray;
 				}
 			}
 			&-5 {
-				right: 67px;
+				right: 69px;
 				top: 129px;
 				&:after {
 					content: '05';
-					position: absolute;
-					left: 30px;
-					top: 5px;
-					.stem-bold;
-					font-size: 10px;
-					color: @base-gray;
+				}
+			}
+			&-6 {
+				right: 32px;
+				top: 79px;
+				&:after {
+					content: '06';
+				}
+			}
+			&-7 {
+				right: -22px;
+				top: 51px;
+				&:after {
+					content: '07';
 				}
 			}
 			&_active {
@@ -583,25 +610,83 @@ li {
 			}
 		}
 	}
+	&-content {
+		position: relative;
+		&_friday {
+			position: absolute;
+			right: 108px;
+			top: 38px;
+			h2 {
+				.stem-reg;
+				font-size: 14px;
+				color: #fff;
+				margin: 0;
+			}
+		}
+		&_item {
+			position: absolute;
+			top: 122px;
+			right: 169px;
+			visibility: hidden;
+			opacity: 0;
+			transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+			text-align: right;
+			h3 {
+				.stem-bold;
+				font-size: 22px;
+				color: #fff;
+				margin: 0px 0px 6px 0px;		
+			}
+			hr {
+				width: 140px;
+				margin: 0;
+				color: rgba(163, 163, 163, .3);
+				background-color: rgba(163, 163, 163, .3);
+				// opacity: .3;
+				&:before {
+					content: "";
+					height: 1px;
+					width: 60px;
+					position: absolute;
+					left: 0;
+					top: 30px;
+					background-color: @base-blue;
+					box-shadow: -2px 3px 9px 0.5px #229aff;
+				}
+			}
+			h4 {
+				.stem-reg;
+				font-size: 14px;
+				margin: 8px 0 0 0;
+				color: @base-gray;
+			}
+			&_active {
+				visibility: visible;
+				opacity: 1;
+				color: @base-gray;
+			}
+		}
+	}
 }
 /* Контейнер для фона */
 .background-container {
 	position: absolute;
 	height: 100vh;
-	min-height: 768px;
+	min-height: 675px;
 	width: 100%;
 	z-index: 1;
 	&_item {
 		position: absolute;
 		background-size: cover;
 		background-position: center;
-		height: 100%;
+		// height: 100%;
+		height: 100vh;
+		min-height: 675px;
 		width: 100%;
 		transition:background 1s ease-in-out;
 		transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
 		opacity:.0;
 		visibility:hidden;
-		// display: none;
 		&-1 {
 			background-image: url(../img/slides/1.png);
 		}
@@ -617,10 +702,42 @@ li {
 		&-5 {
 			background-image: url(../img/slides/5.png);
 		}
+		&-6 {
+			background-image: url(../img/slides/1.png);
+		}
+		&-7 {
+			background-image: url(../img/slides/2.png);
+		}
 		&_active {
-			// display: block;
 			opacity: 1;
 			visibility: visible;
 		}
+	}
+}
+
+/* ====================== Media Queries ======================*/
+@media (max-width: 350px) {
+	
+}
+@media (max-width: 480px) {
+
+}
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+@media (min-width: 1200px) and (max-width: 1600px) {
+	.container {
+		width: 90%;
+	}
+}
+@media (min-width: 1601px) {
+	.container {
+		width: 85%;
 	}
 }
