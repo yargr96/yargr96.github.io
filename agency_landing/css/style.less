@@ -197,6 +197,96 @@ hr {
 		}
 	}
 }
+//Кнопака с ховером
+.btn_animated {
+	border: 1px solid #393939;
+	display: inline-block;
+	padding:15px 32px;
+	border-radius: 50px;
+	background-color: transparent;
+	-webkit-transition: background-color .2s ease-out, color .2s ease-out;
+	transition: background-color .2s ease-out, color .2s ease-out;
+	-webkit-transition: border .5s ease-out, color .5s ease-out;
+	transition: border .5s ease-out, color .5s ease-out;
+	-webkit-transition: color .2s ease-out, color .2s ease-out;
+	transition: color .2s ease-out, color .2s ease-out;
+	position: relative;
+	&:hover {
+		border: 1px solid @base-blue;
+		color: #fff;
+		.btn_hover {
+			width: 100.5%;
+			&:before {
+				opacity: 1;
+				-webkit-transform: translate3d(0, 0, 0);
+						transform: translate3d(0, 0, 0);
+				-webkit-transition: opacity .2s ease-out, -webkit-transform .2s ease-out;
+				transition: opacity .2s ease-out, -webkit-transform .2s ease-out;
+				transition: transform .2s ease-out, opacity .2s ease-out;
+				transition: transform .2s ease-out, opacity .2s ease-out, -webkit-transform .2s ease-out;
+				z-index: 1;
+				border-radius: 50px;
+			}
+			&:after {
+				opacity: 1;
+				-webkit-transition: opacity 0s .25s ease-out;
+				transition: opacity 0s .25s ease-out;
+				z-index: 1;
+				border-radius: 50px;
+			}
+		}
+		.btn_text {
+			color: #fff;
+		}
+	}
+	.btn_hover {
+		position: absolute;
+		top: -1px;
+		left: -1px;
+		right: -1px;
+		bottom: -1px;
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background-image: -webkit-linear-gradient(left, @base-blue 0%, @base-blue 50%, @base-blue 100%);
+			background-image: linear-gradient(to right, @base-blue 0%, @base-blue 50%, @base-blue 100%);
+			opacity: 0;
+			-webkit-transition: opacity .2s ease-out, -webkit-transform 0 ease-out;
+			transition: opacity .2s ease-out, -webkit-transform 0 ease-out;
+			transition: transform 0 ease-out, opacity .2s ease-out;
+			transition: transform 0 ease-out, opacity .2s ease-out, -webkit-transform 0 ease-out;
+			-webkit-transform: scale3d(0.7, 1, 1);
+					transform: scale3d(0.7, 1, 1);
+			border-radius: 50px;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-image: -webkit-linear-gradient(left, @base-blue 0%, @base-blue 50%, @base-blue 100%);
+			background-image: linear-gradient(to right, @base-blue 0%, @base-blue 50%, @base-blue 100%);
+			opacity: 0;
+			-webkit-transition: opacity .4s ease-out;
+					transition: opacity .4s ease-out;
+			border-radius: 50px;
+		}
+	}
+	.btn_text {
+		.stem-reg;
+		font-size: 12px;
+		letter-spacing: .8px;
+		color: #dcdcdc;
+		position: relative;
+		z-index: 2;
+	}
+}
 // Полоска с основным контентом
 .main-content-row {
 	margin-top: 125px;
@@ -221,7 +311,7 @@ hr {
 			margin-bottom: 53px;
 		}
 		// Кнопка рассчитать стоимость
-		.calc-btn {
+		/* .calc-btn {
 			border: 1px solid #393939;
 			display: inline-block;
 			padding:15px 32px;
@@ -310,7 +400,7 @@ hr {
 				position: relative;
 				z-index: 2;
 			}
-		}
+		} */
 	}
 }
 // Контакты
@@ -722,6 +812,7 @@ hr {
 	&_item {
 		background-size: cover;
 		position: absolute;
+		overflow: hidden;
 		&-1 {
 			width: 34%;
 			height: 44%;
@@ -766,6 +857,7 @@ hr {
 		}
 		&:hover {
 			.portfolio_item_cover {
+				transform: translate(0px, 0%);
 				visibility: visible;
 			}
 		}
@@ -775,16 +867,25 @@ hr {
 			position: absolute;
 			left: 0;
 			top: 0;
-			background-color: rgba(0, 0, 0, .5);
+			background-color: rgba(19, 19, 19, .95);
 			visibility: hidden;
+			text-align: center;
+			transform: translate(0px, 100%);
+			transition: all .5s;
+			&_content {
+				position: absolute;
+				top: 50%;
+				width: 100%;
+				margin-top: -61px;
+			}
 			&_header {
 				.stem-bold;
 				font-size: 22px;
 				color: #fff;
-				text-align: center;
+				margin: 0 0 25px 0;
 			}
 			&_btn {
-
+				
 			}
 		}
 	}
