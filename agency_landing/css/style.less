@@ -136,33 +136,7 @@ hr {
 		}
 	}
 }
-/* Полоска навигации */
-.nav-row {
-	height: 67px;
-	// Колонка меню
-	.menu-collumn {
-		line-height: 67px;
-		.main-menu {
-			.menu-item{
-				margin: 0 5px;
-				&-a {
-					.stem-reg;
-					font-size: 12px;
-					color: #c1c1c1;
-					border: 1px solid transparent;
-					border-radius: 50px;
-					padding: 14px 22px;
-					transition: all .3s;
-					&:hover {
-						// border: 1px solid #373737;
-						color: #fff;
-						// .stem-med;
-					}
-				}
-			}
-		}
-	}
-	// Колонка с телефоном
+// Колонка с телефоном
 	.tel-collumn {
 		.tel-number {
 			.stem-bold;
@@ -197,6 +171,67 @@ hr {
 			}
 		}
 	}
+/* Полоска навигации */
+.nav-row {
+	height: 67px;
+	// Колонка меню
+	.menu-collumn {
+		line-height: 67px;
+		.main-menu {
+			.menu-item{
+				margin: 0 5px;
+				&-a {
+					.stem-reg;
+					font-size: 12px;
+					color: #c1c1c1;
+					border: 1px solid transparent;
+					border-radius: 50px;
+					padding: 14px 22px;
+					transition: all .3s;
+					&:hover {
+						// border: 1px solid #373737;
+						color: #fff;
+						// .stem-med;
+					}
+				}
+			}
+		}
+	}
+	// Колонка с телефоном
+	/* .tel-collumn {
+		.tel-number {
+			.stem-bold;
+			font-size: 18px;
+			line-height: 2;
+			.tel-span {
+				color: @base-blue;
+				font-size: 20px;
+			}
+		}
+		// Заказать звонок
+		.request {
+			.stem-reg;
+			position: relative;
+			border-left: 10px solid transparent;
+			i {
+				border: 1px solid #373737;
+				border-radius: 50px;
+				padding: 7px 9px;
+				margin-right: 8px;
+				position: absolute;
+				left: -42px;
+				top: -5px;
+				transition: all .3s;
+			}
+			&:hover i {
+				padding: 10px 12px;
+				left: -45px;
+				top: -8px;
+				color: @base-blue;
+				text-shadow: -1px 4px 7px rgba(34, 154, 255, 1);
+			}
+		}
+	} */
 }
 //Кнопака с ховером
 .btn_animated {
@@ -777,8 +812,10 @@ hr {
 	z-index: 1;
 	&_item {
 		position: absolute;
+		background-color: #0e0e0e;
 		background-size: cover;
 		background-position: center;
+		background-repeat: no-repeat;
 		// height: 100%;
 		height: 100vh;
 		min-height: 675px;
@@ -806,7 +843,7 @@ hr {
 			background-image: url(../img/slides/1.png);
 		}
 		&-7 {
-			background-image: url(../img/slides/2.png);
+			background-image: url(../img/slides/1920kh1080.jpg);
 		}
 		&_active {
 			opacity: 1;
@@ -965,15 +1002,44 @@ hr {
 					border-radius: 100px;
 					margin-bottom: 9px;
 					border: none;
+					padding-left: 45px;
 					border-top: 3px solid rgba(0, 0, 0, .3);
+					background-repeat: no-repeat;
+					background-position: 24px center;
 					&:focus {
 						outline: none;
 					}
+				}
+				.phone-bg {
+					height: 55px;
+					width: 275px;
+					&-item {
+						background-color: #fff;
+						height: 100%;
+						&-1 {
+							width: 78px;
+						}
+						&-2 {
+
+						}
+						&-3 {
+
+						}
+					}
+				}
+				.name-input {
+					background-image: url(../img/persone.png);
+				}
+				.phone-input {
+					background-image: url(../img/phone.png);
 				}
 				button {
 					width: 275px;
 					margin-top: 4px;
 					height: 55px;
+					&:focus {
+						outline: none;
+					}
 				}
 			}
 			p {
@@ -1071,6 +1137,7 @@ hr {
 				right: 0;
 				top: 50%;
 				margin-top: -30px;
+				text-align: right;
 			}
 		}
 	}
