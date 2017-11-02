@@ -81,6 +81,7 @@ html, body {
 	position: relative;
 
 }
+
 a {
 	color: #fff;
 	&:hover, &:focus {
@@ -137,40 +138,40 @@ hr {
 	}
 }
 // Колонка с телефоном
-	.tel-collumn {
-		.tel-number {
-			.stem-bold;
-			font-size: 18px;
-			line-height: 2;
-			.tel-span {
-				color: @base-blue;
-				font-size: 20px;
-			}
-		}
-		// Заказать звонок
-		.request {
-			.stem-reg;
-			position: relative;
-			border-left: 10px solid transparent;
-			i {
-				border: 1px solid #373737;
-				border-radius: 50px;
-				padding: 7px 9px;
-				margin-right: 8px;
-				position: absolute;
-				left: -42px;
-				top: -5px;
-				transition: all .3s;
-			}
-			&:hover i {
-				padding: 10px 12px;
-				left: -45px;
-				top: -8px;
-				color: @base-blue;
-				text-shadow: -1px 4px 7px rgba(34, 154, 255, 1);
-			}
+.tel-collumn {
+	.tel-number {
+		.stem-bold;
+		font-size: 18px;
+		line-height: 2;
+		.tel-span {
+			color: @base-blue;
+			font-size: 20px;
 		}
 	}
+	// Заказать звонок
+	.request {
+		.stem-reg;
+		position: relative;
+		border-left: 10px solid transparent;
+		i {
+			border: 1px solid #373737;
+			border-radius: 50px;
+			padding: 7px 9px;
+			margin-right: 8px;
+			position: absolute;
+			left: -42px;
+			top: -5px;
+			transition: all .3s;
+		}
+		&:hover i {
+			padding: 10px 12px;
+			left: -45px;
+			top: -8px;
+			color: @base-blue;
+			text-shadow: -1px 4px 7px rgba(34, 154, 255, 1);
+		}
+	}
+}
 /* Полоска навигации */
 .nav-row {
 	height: 67px;
@@ -197,41 +198,6 @@ hr {
 			}
 		}
 	}
-	// Колонка с телефоном
-	/* .tel-collumn {
-		.tel-number {
-			.stem-bold;
-			font-size: 18px;
-			line-height: 2;
-			.tel-span {
-				color: @base-blue;
-				font-size: 20px;
-			}
-		}
-		// Заказать звонок
-		.request {
-			.stem-reg;
-			position: relative;
-			border-left: 10px solid transparent;
-			i {
-				border: 1px solid #373737;
-				border-radius: 50px;
-				padding: 7px 9px;
-				margin-right: 8px;
-				position: absolute;
-				left: -42px;
-				top: -5px;
-				transition: all .3s;
-			}
-			&:hover i {
-				padding: 10px 12px;
-				left: -45px;
-				top: -8px;
-				color: @base-blue;
-				text-shadow: -1px 4px 7px rgba(34, 154, 255, 1);
-			}
-		}
-	} */
 }
 //Кнопака с ховером
 .btn_animated {
@@ -344,99 +310,8 @@ hr {
 			font-size: 14px;
 			line-height: 1.786;
 			margin-top: 15px;
-			margin-bottom: 53px;
+			margin-bottom: 23px;
 		}
-		// Кнопка рассчитать стоимость
-		/* .calc-btn {
-			border: 1px solid #393939;
-			display: inline-block;
-			padding:15px 32px;
-			border-radius: 50px;
-			background-color: transparent;
-			-webkit-transition: background-color .2s ease-out, color .2s ease-out;
-			transition: background-color .2s ease-out, color .2s ease-out;
-			-webkit-transition: border .5s ease-out, color .5s ease-out;
-			transition: border .5s ease-out, color .5s ease-out;
-			-webkit-transition: color .2s ease-out, color .2s ease-out;
-			transition: color .2s ease-out, color .2s ease-out;
-			position: relative;
-			
-			&:hover {
-				border: 1px solid @base-blue;
-				color: #fff;
-				.btn_hover {
-					width: 100.5%;
-					&:before {
-						opacity: 1;
-						-webkit-transform: translate3d(0, 0, 0);
-								transform: translate3d(0, 0, 0);
-						-webkit-transition: opacity .2s ease-out, -webkit-transform .2s ease-out;
-						transition: opacity .2s ease-out, -webkit-transform .2s ease-out;
-						transition: transform .2s ease-out, opacity .2s ease-out;
-						transition: transform .2s ease-out, opacity .2s ease-out, -webkit-transform .2s ease-out;
-						z-index: 1;
-						border-radius: 50px;
-					}
-					&:after {
-						opacity: 1;
-						-webkit-transition: opacity 0s .25s ease-out;
-						transition: opacity 0s .25s ease-out;
-						z-index: 1;
-						border-radius: 50px;
-					}
-				}
-				.btn_text {
-					color: #fff;
-				}
-			}
-			.btn_hover {
-				position: absolute;
-				top: -1px;
-				left: -1px;
-				right: -1px;
-				bottom: -1px;
-				&:before {
-					content: '';
-					position: absolute;
-					left: 0;
-					top: 0;
-					right: 0;
-					bottom: 0;
-					background-image: -webkit-linear-gradient(left, @base-blue 0%, @base-blue 50%, @base-blue 100%);
-					background-image: linear-gradient(to right, @base-blue 0%, @base-blue 50%, @base-blue 100%);
-					opacity: 0;
-					-webkit-transition: opacity .2s ease-out, -webkit-transform 0 ease-out;
-					transition: opacity .2s ease-out, -webkit-transform 0 ease-out;
-					transition: transform 0 ease-out, opacity .2s ease-out;
-					transition: transform 0 ease-out, opacity .2s ease-out, -webkit-transform 0 ease-out;
-					-webkit-transform: scale3d(0.7, 1, 1);
-							transform: scale3d(0.7, 1, 1);
-					border-radius: 50px;
-				}
-				&:after {
-					content: '';
-					position: absolute;
-					top: 0;
-					left: 0;
-					right: 0;
-					bottom: 0;
-					background-image: -webkit-linear-gradient(left, @base-blue 0%, @base-blue 50%, @base-blue 100%);
-					background-image: linear-gradient(to right, @base-blue 0%, @base-blue 50%, @base-blue 100%);
-					opacity: 0;
-					-webkit-transition: opacity .4s ease-out;
-							transition: opacity .4s ease-out;
-					border-radius: 50px;
-				}
-			}
-			.btn_text {
-				.stem-reg;
-				font-size: 12px;
-				letter-spacing: .8px;
-				color: #dcdcdc;
-				position: relative;
-				z-index: 2;
-			}
-		} */
 	}
 }
 // Соц сети
@@ -558,16 +433,26 @@ hr {
 //Круги
 .round-container {
 	position: absolute;
+	top: 0;
 	width: 100%;
 	height: 100vh;
 	min-height: 675px;
+	z-index: 2;
 	overflow: hidden;
+	.container {
+		height: 100%;
+	}
 }
 .round {
 	position: absolute;
 	border: 1px solid #fff;
 	border-radius: 50%;
 	opacity: .03;
+	&-row {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
 	&-1{
 		height: 144px;
 		width: 144px;
@@ -595,31 +480,31 @@ hr {
 	&-5{
 		height: 215px;
 		width: 215px;
-		right: -115px;
+		right: -135px;
 		top: 280px;
 	}
 	&-6{
 		width: 93px;
 		height: 93px;
-		right: 55px;
+		right: 36px;
 		top: 280px;
 	}
 	&-7{
 		width: 142px;
 		height: 142px;
-		right: -5px;
+		right: -14px;
 		top: 390px;
 	}
 	&-8{
 		height: 20px;
 		width: 20px;
-		right: 174px;
+		right: 150px;
 		top: 460px;
 	}
 	&-9{
 		height: 38px;
 		width: 38px;
-		right: 149px;
+		right: 120px;
 		top: 375px;
 	}
 }
@@ -633,11 +518,22 @@ hr {
 		&_item {
 			&:after {
 				position: absolute;
-				left: 30px;
+				left: 25px;
 				top: 5px;
 				.stem-bold;
 				font-size: 10px;
 				color: @base-gray;
+				border-left: 5px solid transparent;
+			}
+			&:before {
+				font-size: 14px;
+				.stem-reg;
+				position: absolute;
+				left: -84px;
+				color: #fff;
+				opacity: 0;
+				visibility: hidden;
+				transition: all .3s;
 			}
 			position:absolute;
 			display:inline-block;
@@ -658,13 +554,21 @@ hr {
 				}
 				&:after {
 					color: @base-blue;
+
+				}
+				&:before {
+					opacity: 1;
+					visibility: visible;
 				}
 			}
 			&-1 {
-				right: -22px;
+				right: -24px;
 				top: 313px;
 				&:after {
 					content: '01';
+				}
+				&:before {
+					content: 'PromoHub';
 				}
 			}
 			&-2 {
@@ -673,12 +577,18 @@ hr {
 				&:after {
 					content: '02';
 				}
+				&:before {
+					content: 'Расцветай';
+				}
 			}
 			&-3 {
 				right: 69px;
 				top: 235px;
 				&:after {
 					content: '03';
+				}
+				&:before {
+					content: 'Эпитал';
 				}
 			}
 			&-4 {
@@ -687,26 +597,38 @@ hr {
 				&:after {
 					content: '04';
 				}
+				&:before {
+					content: 'FirstGame';
+				}
 			}
 			&-5 {
 				right: 69px;
-				top: 129px;
+				top: 125px;
 				&:after {
 					content: '05';
+				}
+				&:before {
+					content: 'Пятница 13';
 				}
 			}
 			&-6 {
 				right: 32px;
-				top: 79px;
+				top: 74px;
 				&:after {
 					content: '06';
 				}
+				&:before {
+					content: 'lorem ipsum';
+				}
 			}
 			&-7 {
-				right: -22px;
-				top: 51px;
+				right: -24px;
+				top: 41px;
 				&:after {
 					content: '07';
+				}
+				&:before {
+					content: 'lorem ipsum';
 				}
 			}
 			&_active {
@@ -858,6 +780,7 @@ hr {
 	position: relative;
 	&_item {
 		background-size: cover;
+		background-image: url(../img/rolling.svg);
 		position: absolute;
 		overflow: hidden;
 		&-1 {
@@ -865,42 +788,43 @@ hr {
 			height: 44%;
 			top: 0;
 			left: 0;
-			background-image: url(../img/cases/1.jpg);			
+			// background-image: url(../img/cases/1.jpg);
+			// background-image: url(../img/rolling.svg);			
 		}
 		&-2 {
 			width: 34%;
 			height: 56.8%;
 			top: 0;
 			left: 34%;
-			background-image: url(../img/cases/2.jpg);
+			// background-image: url(../img/cases/2.jpg);
 		}
 		&-3 {
 			width: 32%;
 			height: 38.4%;
 			top: 0;
 			left: 68%;
-			background-image: url(../img/cases/3.jpg);
+			// background-image: url(../img/cases/3.jpg);
 		}
 		&-4 {
 			top: 44%;
 			left: 0;
 			width: 34%;
 			height: 56%;
-			background-image: url(../img/cases/4.jpg);
+			// background-image: url(../img/cases/4.jpg);
 		}
 		&-5 {
 			top: 56.8%;
 			left: 34%;
 			width: 34%;
 			height: 43.2%;
-			background-image: url(../img/cases/5.jpg);
+			// background-image: url(../img/cases/5.jpg);
 		}
 		&-6 {
 			width: 32%;
 			height: 61.6%;
 			left: 68%;
 			top: 38.4%;
-			background-image: url(../img/cases/6.jpg);
+			// background-image: url(../img/cases/6.jpg);
 		}
 		&:hover {
 			.portfolio_item_cover {
@@ -1177,10 +1101,106 @@ hr {
 
 /* ====================== Media Queries ======================*/
 @media (max-width: 350px) {
-	
-}
-@media (max-width: 480px) {
+	body {
+		font-size: 10px;
+	}
+	.tel-collumn {
+		line-height: 3;
+		.tel-number {
+			font-size: 10px !important;
+			span {
+				font-size: 11px !important;
+			}
+		}
+		.request {
+			
+		}
+	}
+	.main-content {
+		text-align: center;
+		h1 {
+			font-size: 20px !important;
+		}
+		h2 {
+			font-size: 9px !important;
+			// color: #fff !important;
+		}
+	}
+	.slider {
+		margin-top: 30px;
+		text-align: center;
+		&-buttons {
+			position: relative;
+			right: auto;
+			bottom: auto;
+			text-align: center;
+			&_item {
+				position: relative;
+				top: auto !important;
+				right: auto !important;
+				&:after {
+					display: none;
+				}
+				&:before {
+					display: none;
+				}
 
+			}
+		}
+	}
+}
+@media (min-width: 351px) and (max-width: 480px) {
+	body {
+		font-size: 10px;
+	}
+	.tel-collumn {
+		.tel-number {
+			font-size: 14px;
+			span {
+				font-size: 16px !important;
+			}
+		}
+		.request {
+			
+		}
+	}
+	.main-content {
+		text-align: center;
+		h1 {
+			font-size: 24px !important;
+		}
+		h2 {
+			font-size: 11px !important;
+			// color: #fff !important;
+		}
+		.calc-btn {
+			.btn_text {
+				font-size: 14px;
+			}
+		}
+	}
+	.slider {
+		margin-top: 100px;
+		text-align: center;
+		&-buttons {
+			position: relative;
+			right: auto;
+			bottom: auto;
+			text-align: center;
+			&_item {
+				position: relative;
+				top: auto !important;
+				right: auto !important;
+				&:after {
+					display: none;
+				}
+				&:before {
+					display: none;
+				}
+				
+			}
+		}
+	}
 }
 @media (min-width: 481px) and (max-width: 767px) {
 
@@ -1198,6 +1218,25 @@ hr {
 }
 @media (min-width: 1601px) {
 	.container {
-		width: 85%;
+		width: 93%;
 	}
+	.menu-item-a {
+		font-size: 14px !important;
+	}
+	.main-content {
+		h1 {
+			font-size: 44px !important;
+		}
+		h2 {
+			font-size: 16px !important;
+			margin: 25px 0 35px 0 !important;
+		}
+		.calc-btn {
+			padding: 18px 66px;
+			.btn_text {
+				font-size: 16px !important;
+			}
+		}
+	}
+
 }

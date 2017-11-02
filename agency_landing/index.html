@@ -25,22 +25,26 @@
   </head>
   <body>
     <div class="background-container">
-      <div class="background-container_item background-container_item-1 background-container_item_active">
+      <div class="background-container_item background-container_item-1 background-container_item_active i-lazy)cover i-lazy">
       </div>
-      <div class="background-container_item background-container_item-2"></div>
-      <div class="background-container_item background-container_item-3"></div>
-      <div class="background-container_item background-container_item-4"></div>
-      <div class="background-container_item background-container_item-5"></div>
-      <div class="background-container_item background-container_item-6"></div>
-      <div class="background-container_item background-container_item-7"></div>
+      <div class="background-container_item background-container_item-2 i-lazy)cover i-lazy"></div>
+      <div class="background-container_item background-container_item-3 i-lazy)cover i-lazy"></div>
+      <div class="background-container_item background-container_item-4 i-lazy)cover i-lazy"></div>
+      <div class="background-container_item background-container_item-5 i-lazy)cover i-lazy"></div>
+      <div class="background-container_item background-container_item-6 i-lazy)cover i-lazy"></div>
+      <div class="background-container_item background-container_item-7 i-lazy)cover i-lazy"></div>
     </div>
     <div class="container line-container">
         <div class="line line-1"></div>
-        <div class="line line-2"></div>
-        <div class="line line-3 line-mouse"></div>
-        <div class="line line-4"></div>
+        <div class="line line-2 hidden-xs"></div>
+        <div class="line line-3 hidden-xs line-mouse"></div>
+        <div class="line line-4 hidden-xs"></div>
         <div class="line line-5"></div>
-        <div class="round-container">
+        
+    </div>
+    <div class="round-container hidden-xs">
+      <div class="container">
+        <div class="round-row">
           <!-- <div class="round round-1"></div> -->
           <!-- <div class="round round-2"></div> -->
           <!-- <div class="round round-3"></div> -->
@@ -51,6 +55,7 @@
           <div class="round round-8"></div>
           <div class="round round-9"></div>
         </div>
+      </div>
     </div>
     <header class="main">
       <div class="lang">
@@ -60,10 +65,10 @@
       </div>
       <div class="container">
         <div class="row nav-row">
-          <div class="col-md-3">
+          <div class="col-md-3 col-xs-6">
             <img src="img/logo.png" alt="Лого">
           </div>
-          <div class="col-md-6 menu-collumn">
+          <div class="col-md-6 menu-collumn hidden-xs">
             <ul class="main-menu text-center">
               <li class="menu-item"><a href="#" class="menu-item-a">Агентство</a></li>
               <li class="menu-item"><a href="#" class="menu-item-a">Услуги</a></li>
@@ -71,7 +76,7 @@
               <li class="menu-item"><a href="#" class="menu-item-a">Контакты</a></li>
             </ul>
           </div>
-          <div class="col-md-3 text-right tel-collumn">
+          <div class="col-md-3 col-xs-6 text-right tel-collumn">
             <a class="tel-number" href="+79994692994">+7 (999) <span class="tel-span">469-29-94</span></a><br>
             <a class="request" href="#"><i class="fa fa-phone"></i> Заказать звонок</a>
           </div>
@@ -86,34 +91,11 @@
             </a>
           </div>
           <div class="col-md-6 slider">
-            <div class="slider-buttons">
-              <div class="slider-buttons_item slider-buttons_item_active slider-buttons_item-1" data-id="1">
-                <div class="slider-buttons_item-round"></div>
-              </div>
-              <div class="slider-buttons_item slider-buttons_item-2" data-id="2">
-                <div class="slider-buttons_item-round"></div>
-              </div>
-              <div class="slider-buttons_item slider-buttons_item-3" data-id="3">
-                <div class="slider-buttons_item-round"></div>
-              </div>
-              <div class="slider-buttons_item slider-buttons_item-4" data-id="4">
-                <div class="slider-buttons_item-round"></div>
-              </div>
-              <div class="slider-buttons_item slider-buttons_item-5" data-id="5">
-                <div class="slider-buttons_item-round"></div>
-              </div>
-              <div class="slider-buttons_item slider-buttons_item-6" data-id="6">
-                <div class="slider-buttons_item-round"></div>
-              </div>
-              <div class="slider-buttons_item slider-buttons_item-7" data-id="7">
-                <div class="slider-buttons_item-round"></div>
-              </div>
-            </div>
             <div class="slider-content">
-              <div class="slider-content_friday">
+              <!-- <div class="slider-content_friday">
                 <h2>Пятница 13</h2>
-              </div>
-              <div class="slider-content_item slider-content_item_active slider-content_item-1">
+              </div> -->
+              <div class="slider-content_item hidden-xs slider-content_item_active slider-content_item-1">
                 <h3>Promohub</h3>
                 <hr>
                 <h4>Landing-page</h4>
@@ -149,20 +131,44 @@
                 <h4>Мероприятие</h4>
               </div>
             </div>
+            <div class="slider-buttons">
+              <div class="slider-buttons_item slider-buttons_item_active slider-buttons_item-1" data-id="1">
+                <div class="slider-buttons_item-round"></div>
+              </div>
+              <div class="slider-buttons_item slider-buttons_item-2" data-id="2">
+                <div class="slider-buttons_item-round"></div>
+              </div>
+              <div class="slider-buttons_item slider-buttons_item-3" data-id="3">
+                <div class="slider-buttons_item-round"></div>
+              </div>
+              <div class="slider-buttons_item slider-buttons_item-4" data-id="4">
+                <div class="slider-buttons_item-round"></div>
+              </div>
+              <div class="slider-buttons_item slider-buttons_item-5" data-id="5">
+                <div class="slider-buttons_item-round"></div>
+              </div>
+              <div class="slider-buttons_item slider-buttons_item-6" data-id="6">
+                <div class="slider-buttons_item-round"></div>
+              </div>
+              <div class="slider-buttons_item slider-buttons_item-7" data-id="7">
+                <div class="slider-buttons_item-round"></div>
+              </div>
+            </div>
+            
           </div>
         </div> <!-- /content row -->
       </div> <!-- /containter -->
       <div class="contacts">
         <div class="container ">
           <div class="row contacts-row">
-            <div class="col-md-6 socials">
+            <div class="col-xs-6 socials">
               <a href="#"><i class="fa fa-behance"></i></a>
               <span>/</span>
               <a href="#"><i class="fa fa-vk"></i></a>
               <span>/</span>
               <a href="#"><i class="fa fa-instagram"></i></a>
             </div>
-            <div class="col-md-6 watch text-right">
+            <div class="col-xs-6 watch text-right">
               <a href="#">Смотреть</a>
             </div>
           </div>
@@ -170,7 +176,7 @@
       </div>
     </header>
     <section id="portfolio" class="portfolio">
-      <div class="portfolio_item portfolio_item-1">
+      <div class="portfolio_item portfolio_item-1 i-lazy i-lazy_cover" data-original="img/cases/1.jpg" data-id="1">
         <div class="portfolio_item_cover portfolio-item_cover-1">
           <div class="portfolio_item_cover_content">
             <h3 class="portfolio_item_cover_header">Производство скиналей <br>из Беларуси</h3>
@@ -180,7 +186,7 @@
           </div>
         </div>
       </div>
-      <div class="portfolio_item portfolio_item-2">
+      <div class="portfolio_item portfolio_item-2 i-lazy" data-original="img/cases/2.jpg">
         <div class="portfolio_item_cover portfolio-item_cover-2">
           <div class="portfolio_item_cover_content">
             <h3 class="portfolio_item_cover_header">Производство скиналей из <br>Беларуси</h3>
@@ -191,7 +197,7 @@
           </div>
         </div>
       </div>
-      <div class="portfolio_item portfolio_item-3">
+      <div class="portfolio_item portfolio_item-3 i-lazy" data-original="img/cases/3.jpg">
         <div class="portfolio_item_cover portfolio-item_cover-3">
           <div class="portfolio_item_cover_content">
             <h3 class="portfolio_item_cover_header">Производство скиналей из <br>Беларуси</h3>
@@ -202,7 +208,7 @@
           </div>
         </div>
       </div>
-      <div class="portfolio_item portfolio_item-4">
+      <div class="portfolio_item portfolio_item-4 i-lazy" data-original="img/cases/4.jpg">
         <div class="portfolio_item_cover portfolio-item_cover-4">
           <div class="portfolio_item_cover_content">
             <h3 class="portfolio_item_cover_header">Производство скиналей из <br>Беларуси</h3>
@@ -213,7 +219,7 @@
           </div>
         </div>
       </div>
-      <div class="portfolio_item portfolio_item-5">
+      <div class="portfolio_item portfolio_item-5 i-lazy" data-original="img/cases/5.jpg">
         <div class="portfolio_item_cover portfolio-item_cover-5">
           <div class="portfolio_item_cover_content">
             <h3 class="portfolio_item_cover_header">Производство скиналей из <br>Беларуси</h3>
@@ -224,7 +230,7 @@
           </div>
         </div>
       </div>
-      <div class="portfolio_item portfolio_item-6">
+      <div class="portfolio_item portfolio_item-6 i-lazy" data-original="img/cases/6.jpg">
         <div class="portfolio_item_cover portfolio-item_cover-5">
           <div class="portfolio_item_cover_content">
             <h3 class="portfolio_item_cover_header">Производство скиналей из <br>Беларуси</h3>
@@ -258,7 +264,7 @@
                 <p class="">Введите <span>Ваше имя</span> (необяз.):</p>
                 <input class="name-input" type="text" placeholder="Александр">
                 <p class="">Введите <span>Ваш телефон:</span></p>
-                <input class="phone-input" type="tel" placeholder="+7            (999)          999-99-99">
+                <input id="phone-input" class="phone-input" type="tel" placeholder="+7           ( 999 )          999-99-99">
                 <div class="phone-bg">
                   <div class="phone-bg-item phone-bg-item-1"></div>
                   <div class="phone-bg-item phone-bg-item-2"></div>
@@ -326,6 +332,19 @@
     <script src="js/jquery.lazyload.min.js"></script>
     <!-- Circle progress -->
     <script src="js/circle-progress.min.js"></script>
+    <script src="js/jquery.lazyload.min.js"></script>
+    <!-- Masked Input -->
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script>
+      jQuery(function($) {
+        $('#phone-input').mask("+7           (999)          999-9999");
+      })
+    </script>
+    <script>
+      $(".i-lazy").lazyload({
+          effect: "fadeIn"
+      });
+    </script>
     <!-- Слайдер -->
     <script>
       $(document).ready(function(){
@@ -406,6 +425,7 @@
         $(window).scroll(function(m) {
             f();
         });
+        
       })
       
     </script>
