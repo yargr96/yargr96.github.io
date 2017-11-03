@@ -747,10 +747,10 @@ hr {
 		opacity:.0;
 		visibility:hidden;
 		&-1 {
-			background-image: url(../img/slides/1.png);
+			background-image: url(../img/slides/1.jpg);
 		}
 		&-2 {
-			background-image: url(../img/slides/2.png);
+			background-image: url(../img/slides/2.jpg);
 		}
 		&-3 {
 			background-image: url(../img/slides/3.png);
@@ -866,11 +866,11 @@ hr {
 	position: relative;
 	z-index: 3;
 	height: 785px;
-	// background-color: #000;
-	// background-image: url(../img/footer-bg.png);
-	// background-size: auto;
-	// background-position: bottom right;
-	// background-repeat: no-repeat;
+	background-color: #000;
+	background-image: url(../img/footer-bg.png);
+	background-size: auto;
+	background-position: bottom right;
+	background-repeat: no-repeat;
 	&_main-row {
 		height: 535px;
 		padding: 125px 0 125px 0;
@@ -1154,6 +1154,67 @@ hr {
 	.contacts-row .watch a {
 		font-size: 14px;
 	}
+	.portfolio_item_cover {
+		&_header {
+			font-size: 10px !important;
+		}
+		a {
+			padding: 3px 5px;
+			.btn_text {
+				font-size: 6px !important;
+			}
+		}
+		&_content {
+			margin-top: -37px;
+		}
+	}
+	.footer-section {
+		background-position: left bottom;
+		height: auto;
+	}
+	.footer-section_main-row {
+		padding: 20px 0;
+	}
+	.footer-section_main-row_offer-col {
+		text-align: center;
+		&_offer {
+			
+		}
+		&_header {
+
+		}
+		&_text {
+
+		}
+	}
+	.footer-section_form-col_form form {
+		margin-top: 20px;
+	}
+	.footer-section_form-col_form form p{
+		text-align: center;
+	}
+	.footer-section_form-col_form form input {
+		font-size: 14px;
+	}
+	footer {
+		position: relative !important;
+		margin-top: 200px !important;
+		height: auto !important;
+		.footer-col {
+			display: block !important;
+			text-align: center;
+			width: 100% !important;
+		}
+		.footer-col-1_content {
+			position: relative !important;
+		}
+		.footer-col-5 {
+			position: relative !important;
+			display: block !important;
+		    margin-top: 57px !important;
+		    margin-bottom: 67px;;
+		}
+	}
 }
 @media (min-width: 351px) and (max-width: 480px) {
 	body {
@@ -1213,9 +1274,63 @@ hr {
 	.contacts-row .watch a {
 		font-size: 14px;
 	}
+	.portfolio_item_cover {
+		&_header {
+			font-size: 10px !important;
+		}
+		a {
+			padding: 3px 5px;
+			.btn_text {
+				font-size: 6px !important;
+			}
+		}
+		&_content {
+			margin-top: -37px;
+		}
+	}
+	.footer-section {
+		background-position: left bottom;
+	}
+	.footer-section_main-row_offer-col {
+		text-align: center;
+		&_offer {
+			
+		}
+		&_header {
+
+		}
+		&_text {
+
+		}
+	}
+	footer {
+		position: relative !important;
+		margin-top: 170px;
+	}
 }
 @media (min-width: 481px) and (max-width: 767px) {
-
+	.slider {
+		margin-top: 100px;
+		text-align: center;
+		&-buttons {
+			position: relative;
+			right: auto;
+			bottom: auto;
+			text-align: center;
+			&_item {
+				position: relative;
+				top: auto !important;
+				right: auto !important;
+				&:after {
+					display: none;
+				}
+				&:before {
+					display: none;
+				}
+				
+			}
+		}
+	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
 
