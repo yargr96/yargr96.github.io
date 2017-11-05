@@ -140,6 +140,7 @@ hr {
 // Колонка с телефоном
 .tel-collumn {
 	.tel-number {
+		white-space: nowrap;
 		.stem-bold;
 		font-size: 18px;
 		line-height: 2;
@@ -734,9 +735,9 @@ hr {
 	z-index: 1;
 	&_item {
 		position: absolute;
-		background-color: #0e0e0e;
-		background-size: cover;
-		background-position: center;
+		background: #0e0e0e url(../img/rolling.svg);
+		background-size: cover !important;
+		background-position: center center;
 		background-repeat: no-repeat;
 		// height: 100%;
 		height: 100vh;
@@ -746,7 +747,7 @@ hr {
 		transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
 		opacity:.0;
 		visibility:hidden;
-		&-1 {
+		/* &-1 {
 			background-image: url(../img/slides/1.jpg);
 		}
 		&-2 {
@@ -766,7 +767,7 @@ hr {
 		}
 		&-7 {
 			background-image: url(../img/slides/1920kh1080.jpg);
-		}
+		} */
 		&_active {
 			opacity: 1;
 			visibility: visible;
@@ -779,9 +780,9 @@ hr {
 	height: 993px;
 	position: relative;
 	&_item {
-		background-size: cover;
-		background-image: url(../img/rolling.svg);
 		position: absolute;
+		background: #111216 url(../img/rolling.svg) no-repeat center center;
+		background-size: cover !important;
 		overflow: hidden;
 		&-1 {
 			width: 34%;
@@ -861,15 +862,20 @@ hr {
 		}
 	}
 }
+.i-lazy_cover{
+	-webkit-background-size:auto!important;
+	background-size:auto!important;
+	background-position:center center!important
+}
 /* ====================== Footer Section ======================*/
 .footer-section {
 	position: relative;
 	z-index: 3;
-	height: 785px;
+	// height: 785px;
 	background-color: #000;
 	background-image: url(../img/footer-bg.png);
 	background-size: auto;
-	background-position: bottom right;
+	background-position: top right;
 	background-repeat: no-repeat;
 	&_main-row {
 		height: 535px;
@@ -1004,8 +1010,8 @@ hr {
 		}
 	}
 	footer {
-		position: absolute;
-		bottom: 0;
+		position: relative;
+		// bottom: 0;
 		height: 255px;
 		border-top: 3px solid @base-blue;
 		width: 100%;
@@ -1211,8 +1217,12 @@ hr {
 		.footer-col-5 {
 			position: relative !important;
 			display: block !important;
-		    margin-top: 57px !important;
-		    margin-bottom: 67px;;
+		    margin-top: 15px !important;
+		    margin-bottom: 67px;
+			text-align: center !important;
+		}
+		.footer-row {
+			margin-top: 65px;
 		}
 	}
 }
@@ -1224,7 +1234,7 @@ hr {
 		.tel-number {
 			font-size: 14px;
 			span {
-				font-size: 16px !important;
+				font-size: 15px !important;
 			}
 		}
 		.request {
@@ -1290,6 +1300,10 @@ hr {
 	}
 	.footer-section {
 		background-position: left bottom;
+		height: auto;
+	}
+	.footer-section_main-row {
+		padding: 20px 0;
 	}
 	.footer-section_main-row_offer-col {
 		text-align: center;
@@ -1303,9 +1317,37 @@ hr {
 
 		}
 	}
+	.footer-section_form-col_form form {
+		margin-top: 20px;
+	}
+	.footer-section_form-col_form form p{
+		text-align: center;
+	}
+	.footer-section_form-col_form form input {
+		font-size: 14px;
+	}
 	footer {
 		position: relative !important;
-		margin-top: 170px;
+		margin-top: 200px !important;
+		height: auto !important;
+		.footer-col {
+			display: block !important;
+			text-align: center;
+			width: 100% !important;
+		}
+		.footer-col-1_content {
+			position: relative !important;
+		}
+		.footer-col-5 {
+			position: relative !important;
+			display: block !important;
+		    margin-top: 57px !important;
+		    margin-bottom: 67px;
+		    text-align: center !important;
+		}
+		.footer-row {
+			margin-top: 65px;
+		}
 	}
 }
 @media (min-width: 481px) and (max-width: 767px) {
@@ -1329,6 +1371,73 @@ hr {
 				}
 				
 			}
+		}
+	}
+	.contacts-row {
+		line-height: 21px;
+	}
+	.portfolio_item_cover {
+		&_content {
+			h3 {
+				font-size: 15px;
+			}
+			a {
+				padding: 5px 30px;
+				.btn_text {
+					font-size: 10px;
+				}
+			}
+		}
+	}
+	.footer-section {
+		background-position: left bottom;
+		height: auto;
+	}
+	.footer-section_main-row {
+		padding: 20px 0;
+	}
+	.footer-section_main-row_offer-col {
+		text-align: center;
+		&_offer {
+			
+		}
+		&_header {
+
+		}
+		&_text {
+
+		}
+	}
+	.footer-section_form-col_form form {
+		margin-top: 20px;
+	}
+	.footer-section_form-col_form form p{
+		text-align: center;
+	}
+	.footer-section_form-col_form form input {
+		font-size: 14px;
+	}
+	footer {
+		position: relative !important;
+		margin-top: 200px !important;
+		height: auto !important;
+		.footer-col {
+			display: block !important;
+			text-align: center;
+			width: 100% !important;
+		}
+		.footer-col-1_content {
+			position: relative !important;
+		}
+		.footer-col-5 {
+			position: relative !important;
+			display: block !important;
+		    margin-top: 57px !important;
+		    margin-bottom: 67px;
+		    text-align: center !important;
+		}
+		.footer-row {
+			margin-top: 65px;
 		}
 	}
 }
