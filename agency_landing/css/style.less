@@ -141,12 +141,13 @@ hr {
 .tel-collumn {
 	.tel-number {
 		white-space: nowrap;
-		.stem-bold;
+		.stem-med;
 		font-size: 18px;
 		line-height: 2;
 		.tel-span {
 			color: @base-blue;
 			font-size: 20px;
+			.stem-bold;
 		}
 	}
 	// Заказать звонок
@@ -294,6 +295,7 @@ hr {
 .main-content-row {
 	margin-top: 125px;
 	.main-content {
+		padding-left: 66px;
 		h1 {
 			.stem-bold;
 			font-size: 36px;
@@ -349,7 +351,7 @@ hr {
 		.watch {
 			padding-right: 27px;
 			a {
-				.stem-med;
+				.stem-reg;
 				color: #fff;
 			    border-left: 10px solid transparent;
 				&:before {
@@ -364,7 +366,7 @@ hr {
 				}
 				&:hover {
 					transition: all .3s;
-					text-shadow: -2px 2px 6px rgba(10, 178, 231, 0.69);
+					// text-shadow: -2px 2px 6px rgba(10, 178, 231, 0.69);
 					&:before {
 						content: '';
 						position: absolute;
@@ -417,6 +419,7 @@ hr {
 		right: 15px;
 	}
 	&-mouse {
+		background-color: rgba(0,0,0,0);
 		&:after {
 			content: '';
 			position: absolute;
@@ -943,7 +946,8 @@ hr {
 				}
 				.phone-bg {
 					position: absolute;
-					top: 124px;
+					// top: 124px;
+					top: 64px;
 					left: 0;
 					height: 55px;
 					width: 283px;
@@ -1233,6 +1237,7 @@ hr {
 	.tel-collumn {
 		.tel-number {
 			font-size: 14px;
+			line-height: 3;
 			span {
 				font-size: 15px !important;
 			}
@@ -1442,19 +1447,31 @@ hr {
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
-
+	.container {
+		width: auto;
+		margin: 0 50px;
+		padding: 0;
+	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-
+	.container {
+		width: auto;
+		margin: 0 50px;
+		padding: 0;
+	}
 }
 @media (min-width: 1200px) and (max-width: 1600px) {
 	.container {
-		width: 90%;
+		width: auto;
+		margin: 0 50px;
+		padding: 0;
 	}
 }
 @media (min-width: 1601px) {
 	.container {
-		width: 93%;
+		width: auto;
+		margin: 0 50px;
+		padding: 0;
 	}
 	.menu-item-a {
 		font-size: 14px !important;
