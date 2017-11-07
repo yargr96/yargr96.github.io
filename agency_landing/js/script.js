@@ -41,7 +41,7 @@ if ($(window).width() > 1024) {
 
     (function() {
 
-        // detect if IE : from http://stackoverflow.com/a/16657946    
+        // detect if IE : from http://stackoverflow.com/a/16657946      
         var ie = (function() {
             var undef, rv = -1; // Return value assumes failure.
             var ua = window.navigator.userAgent;
@@ -61,7 +61,7 @@ if ($(window).width() > 1024) {
         }());
 
 
-        // disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179          
+        // disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179                  
         // left: 37, up: 38, right: 39, down: 40,
         // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
         var keys = [32, 37, 38, 39, 40],
@@ -110,7 +110,7 @@ if ($(window).width() > 1024) {
             noscroll,
             isAnimating,
             container = document.getElementById('page'),
-            trigger = container.getElementByClassName('down');
+            trigger = container.querySelector('a.down');
 
         function scrollY() {
             return window.pageYOffset || docElem.scrollTop;
@@ -219,9 +219,9 @@ if ($(window).width() > 1024) {
 
 
 (function() {
-    var header = document.getElementById("main");
+    var header = document.querySelector("#header");
     if (window.location.hash) {
-        header.classList.add("headroom--unpinned");
+        header.classList.add("slide--up");
     }
 
     new Headroom(header, {
@@ -231,9 +231,9 @@ if ($(window).width() > 1024) {
         },
         offset: 205,
         classes: {
-            initial: "headroom",
-            pinned: "headroom--pinned",
-            unpinned: "headroom--unpinned"
+            initial: "slide",
+            pinned: "slide--reset",
+            unpinned: "slide--up"
         }
     }).init();
 

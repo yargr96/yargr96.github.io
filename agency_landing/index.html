@@ -24,7 +24,7 @@
     <![endif]-->
   </head>
   <body class="home">
-    <div id="main" class="headroom">
+    <div id="header" class="headroom">
       <div class="background-container">
         <div class="background-container_item background-container_item-1 background-container_item_active i-lazy_cover i-lazy" data-original="img/slides/1.jpg" data-id="1">
         </div>
@@ -340,6 +340,8 @@
     <script src="js/jquery.maskedinput.min.js"></script>
     <!-- Прокрутка -->
     <script src="js/headroom.js"></script>
+    <script src="js/smothscroll.js"></script>
+    
     <!-- Маска для телефона -->
     <script>
     jQuery(function($) {
@@ -410,8 +412,9 @@
               h();
             },
           i));
-      var k = 993;
-      var j = 1300;
+      //Масштабирование кейсов
+      var k = 1700;
+      var j = 1920;
       var a = k;
       var g = function() {
           var n = $(document).width() / j;
