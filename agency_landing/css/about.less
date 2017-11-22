@@ -1,0 +1,487 @@
+/* ====================== Fonts ======================*/
+@font-face {
+	font-family: 'Conv_Fontfabric - MullerBold';
+	src: url('fonts/Fontfabric - MullerBold.eot');
+	src: local('☺'), url('fonts/Fontfabric - MullerBold.woff') format('woff'), url('fonts/Fontfabric - MullerBold.ttf') format('truetype'), url('fonts/Fontfabric - MullerBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_cinzel-bold_[allfont.ru]';
+	src: url('fonts/cinzel-bold_[allfont.ru].eot');
+	src: local('☺'), url('fonts/cinzel-bold_[allfont.ru].woff') format('woff'), url('fonts/cinzel-bold_[allfont.ru].ttf') format('truetype'), url('fonts/cinzel-bold_[allfont.ru].svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_Stem-Medium';
+	src: url('fonts/Stem-Medium.eot');
+	src: local('☺'), url('fonts/Stem-Medium.woff') format('woff'), url('fonts/Stem-Medium.ttf') format('truetype'), url('fonts/Stem-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_Stem-Regular';
+	src: url('fonts/Stem-Regular.eot');
+	src: local('☺'), url('fonts/Stem-Regular.woff') format('woff'), url('fonts/Stem-Regular.ttf') format('truetype'), url('fonts/Stem-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_Stem-Thin';
+	src: url('fonts/Stem-Thin.eot');
+	src: local('☺'), url('fonts/Stem-Thin.woff') format('woff'), url('fonts/Stem-Thin.ttf') format('truetype'), url('fonts/Stem-Thin.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_Oraqle Script';
+	src: url('fonts/Oraqle Script.eot');
+	src: local('☺'), url('fonts/Oraqle Script.woff') format('woff'), url('fonts/Oraqle Script.ttf') format('truetype'), url('fonts/Oraqle Script.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_Stem-Bold';
+	src: url('fonts/Stem-Bold.eot');
+	src: local('☺'), url('fonts/Stem-Bold.woff') format('woff'), url('fonts/Stem-Bold.ttf') format('truetype'), url('fonts/Stem-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/* ====================== Font Classes ======================*/
+.muller {
+	font-family: 'Conv_Fontfabric - MullerBold';
+}
+.stem-reg {
+	font-family: 'Conv_Stem-Regular';
+}
+.stem-thin {
+	font-family: 'Conv_Stem-Thin';
+}
+.stem-bold {
+	font-family: 'Conv_Stem-Bold';
+}
+.stem-med {
+	font-family: 'Conv_Stem-Medium';
+}
+.oracle {
+	font-family: 'Conv_Oraqle Script';
+}
+.cinzel {
+	font-family: 'Conv_cinzel-bold_[allfont.ru]';
+}
+/* ====================== Base colors ======================*/
+@base-black: #141414;
+@base-blue: #01a7e3;
+@base-gray: #a3a3a3;
+
+/* ====================== Base settings ======================*/
+html, body {
+	position: relative;
+
+}
+
+a {
+	color: #fff;
+	&:hover, &:focus {
+		text-decoration: none;
+		color: #fff;
+	}
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+li {
+	display: inline-block;
+}
+hr {
+	height: 1px;
+	border: none;
+}
+
+#main {
+	background: #101010 url(../img/about/main-bg.jpg) no-repeat center center;
+	background-size: cover;
+	padding: 50px 0;
+	height: 100vh;
+	position: relative;
+	min-height: 675px;
+	.containter {
+
+	}
+
+}
+// Навбар
+// Колонка с телефоном
+.tel-collumn {
+	.tel-number {
+		white-space: nowrap;
+		.stem-med;
+		font-size: 18px;
+		line-height: 2;
+		.tel-span {
+			color: @base-blue;
+			font-size: 20px;
+			.stem-bold;
+		}
+	}
+	// Заказать звонок
+	.request {
+		.stem-reg;
+		position: relative;
+		border-left: 10px solid transparent;
+		i {
+			border: 1px solid #373737;
+			border-radius: 50px;
+			padding: 7px 9px;
+			margin-right: 8px;
+			position: absolute;
+			left: -42px;
+			top: -5px;
+			transition: all .3s;
+		}
+		&:hover i {
+			padding: 10px 12px;
+			left: -45px;
+			top: -8px;
+			color: @base-blue;
+			text-shadow: -1px 4px 7px rgba(34, 154, 255, 1);
+		}
+	}
+}
+/* Полоска навигации */
+.nav-row {
+	height: 67px;
+	// Колонка меню
+	.menu-collumn {
+		line-height: 67px;
+		.main-menu {
+			.menu-item{
+				margin: 0 5px;
+				&-a {
+					.stem-bold;
+					font-size: 12px;
+					color: #c1c1c1;
+					border: 1px solid transparent;
+					border-radius: 50px;
+					padding: 14px 22px;
+					transition: all .3s;
+					&:hover {
+						// border: 1px solid #373737;
+						color: #fff;
+						// .stem-med;
+					}
+				}
+			}
+		}
+	}
+}
+.main-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 564px;
+	margin-left: -282px;
+	margin-top: -74px;
+	text-align: center;
+	&_header {
+		font-size: 45px;
+		.stem-bold;
+		color: #fff;
+		margin: 0 0 30px 0;
+	}
+	&_p {
+		.stem-reg;
+		font-size: 14px;
+		color: #9a9a9a;
+	}
+}
+// Соц сети
+.socials {
+	letter-spacing: 3.4px;
+	font-size: 16px;
+	padding-left: 16px;
+	.fa-instagram {
+		font-size: 17px;
+	}
+	i {
+		color: @base-gray;
+		transition: all .3s;
+	}
+	a:hover {
+		i {
+			color: #17b3eb;
+			text-shadow: 0px 4px 14px rgba(23,179,235,1);
+		}
+	}
+	span {
+		.stem-thin;
+		font-size: 26px;
+	}
+}
+// Контакты
+.contacts {
+	width: 100%;
+	position: absolute;
+	bottom: 50px;left: 0;	
+}
+.lang {
+	position: absolute;
+	right: -27px;
+	top: 160px;
+	border: 1px solid rgba(255, 255, 255, .05);
+	padding: 10px 20px;
+	transform: rotate(90deg);
+	&_a {
+		text-transform: uppercase;
+		.stem-med;
+		font-size: 10px;
+		color: #9d9d9d;
+		&_active {
+			.stem-reg;
+			font-size: 12px;
+			color: #fff;
+		}
+	}
+	span {
+		.stem-reg;
+		font-size: 10px;
+		color: #9d9d9d;
+	}
+}
+.mouse {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	margin-left: -11.5px;
+}
+
+/**************** About section ****************/
+#about {
+	.stem-reg;
+	font-size: 16px;
+	color: #1f1f1f;
+	padding: 150px 20vw;
+	span {
+		.stem-med;
+		border-bottom: 1px #1f1f1f dotted;
+	}
+}
+
+/**************** Team section ****************/
+.team {
+	overflow: hidden;
+	background-color: #070707;
+	text-align: center;
+	padding: 100px 0 100px 0;
+	&-header {
+		.stem-bold;
+		color: #f8f8f8;
+		font-size: 36px;
+		margin-bottom: 90px;
+	}
+	&-item {
+		&_img {
+
+		}
+		&_header {
+			color: #fff;
+			.stem-med;
+			font-size: 20px;
+		}
+		&_p {
+			color: #9a9a9a;
+			.stem-reg;
+			font-size: 12px;
+		}
+		&_socials {
+			letter-spacing: 3.4px;
+			font-size: 16px;
+			padding-left: 16px;
+			.fa-instagram {
+				font-size: 17px;
+			}
+			i {
+				color: @base-gray;
+				transition: all .3s;
+			}
+			a:hover {
+				i {
+					color: #17b3eb;
+					text-shadow: 0px 4px 14px rgba(23,179,235,1);
+				}
+			}
+			span {
+				.stem-thin;
+				font-size: 26px;
+			}
+		}
+	}
+	&-row-2 {
+		margin-top: 30px;
+		transform: translateX(12.5%);
+	}
+}
+/**************** Clients section ****************/
+.clients {
+	padding: 65px 0 65px 0;
+	text-align: center;
+	&-header {
+		color: #101010;
+		.stem-bold;
+		font-size: 36px;
+	}
+	&-p {
+		.stem-reg;
+		font-size: 16px;
+		color: #414141;
+	}
+	&-row {
+		&_item {
+			display: inline-block;
+			width: 19%;
+		}
+	}
+}
+//Footer
+footer {
+	a {
+		transition: all .3s;
+		color: @base-gray;
+		.stem-reg;
+		// font-size: 12px;
+		&:hover {
+			color: @base-blue;
+		}
+		&:focus {
+			color: @base-gray;
+		}
+	}
+	position: relative;
+	background-color: #070707;
+	// bottom: 0;
+	height: 255px;
+	border-top: 3px solid @base-blue;
+	width: 100%;
+	.footer-containter {
+		height: 100%;
+	}
+	.footer-row {
+		width: 100%;
+		position: relative;
+		height: 100%;
+	}
+	.footer-col {
+		vertical-align: middle;
+		display: inline-block;
+		position: relative;
+		h4 {
+			.stem-bold;
+			font-size: 14px;
+			color: #fff;
+			p {
+
+			}
+		}
+		&-1 {
+			width: 12%;
+			height: 100%;
+			.socials {
+				padding: 0;
+			}
+			&_content {
+				position: absolute;
+				top: 50%;
+				margin-top: -52px;
+				height: 104px;
+			}
+		}
+		&-2 {
+			width: 25%;
+			p {
+				color: @base-gray;
+				font-size: 12px;
+				.stem-reg;
+			}
+		}
+		&-3 {
+			width: 20%;
+			ul {
+				li {
+					display: block;
+					
+				}
+			}
+		}
+		&-4 {
+			width: 20%;
+			p {
+				color: @base-gray;
+				font-size: 12px;
+				.stem-reg;
+			}
+		}
+		&-5 {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			margin-top: -30px;
+			text-align: right;
+			a {
+				color: #fff;
+			}
+			.request {
+				i {
+					border: 1px solid #373737;
+					border-radius: 50px;
+					padding: 7px 9px;
+					margin-right: 8px;
+					position: absolute;
+					left: -42px;
+					top: -5px;
+					transition: all .3s;
+				}
+				&:hover i {
+					padding: 10px 12px;
+					left: -42px;
+					top: -5px;
+					color: @base-blue;
+					text-shadow: -1px 4px 7px rgba(34, 154, 255, 1);
+				}
+			}
+		}
+	}
+}
+
+/**************** Media ****************/
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.container {
+		width: auto;
+		margin: 0 50px;
+		padding: 0;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.container {
+		width: auto;
+		margin: 0 50px;
+		padding: 0;
+	}
+}
+@media (min-width: 1200px) and (max-width: 1600px) {
+	.container {
+		width: auto;
+		margin: 0 50px;
+		padding: 0;
+	}
+}
+@media (min-width: 1601px) {
+	.container {
+		width: auto;
+		margin: 0 50px;
+		padding: 0;
+	}
+}
