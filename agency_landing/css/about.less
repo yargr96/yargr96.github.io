@@ -163,6 +163,7 @@ hr {
 				&-a {
 					.stem-bold;
 					font-size: 12px;
+					text-transform: uppercase;
 					color: #c1c1c1;
 					border: 1px solid transparent;
 					border-radius: 50px;
@@ -181,9 +182,7 @@ hr {
 .main-content {
 	position: absolute;
 	top: 50%;
-	left: 50%;
-	width: 564px;
-	margin-left: -282px;
+	width: 100%;
 	margin-top: -74px;
 	text-align: center;
 	&_header {
@@ -263,7 +262,7 @@ hr {
 	.stem-reg;
 	font-size: 16px;
 	color: #1f1f1f;
-	padding: 150px 20vw;
+	padding: 150px 0 150px 111px;
 	span {
 		.stem-med;
 		border-bottom: 1px #1f1f1f dotted;
@@ -337,6 +336,7 @@ hr {
 		.stem-reg;
 		font-size: 16px;
 		color: #414141;
+		margin-bottom: 60px;
 	}
 	&-row {
 		&_item {
@@ -457,11 +457,205 @@ footer {
 
 /**************** Media ****************/
 
+@media (max-width: 350px) {
+	body {
+		font-size: 10px;
+	}
+	.tel-collumn {
+		line-height: 3;
+		.tel-number {
+			font-size: 10px !important;
+			span {
+				font-size: 11px !important;
+			}
+		}
+	}
+	.main-content {
+		text-align: center;
+		h1 {
+			font-size: 20px !important;
+		}
+		h2 {
+			font-size: 9px !important;
+			// color: #fff !important;
+		}
+	}
+	
+	.contacts-row {
+		line-height: 21px;
+	}
+	
+	footer {
+		position: relative !important;
+		// margin-top: 200px !important;
+		height: auto !important;
+		.footer-col {
+			display: block !important;
+			text-align: center;
+			width: 100% !important;
+		}
+		.footer-col-1_content {
+			position: relative !important;
+		}
+		.footer-col-5 {
+			position: relative !important;
+			display: block !important;
+		    margin-top: 15px !important;
+		    margin-bottom: 67px;
+			text-align: center !important;
+		}
+		.footer-row {
+			margin-top: 65px;
+		}
+	}
+	.team-row-2 {
+		transform: translateX(0);
+	}
+	.about {
+		padding-left: 0 !important;
+	}
+	.clients-row {
+		&_item {
+			width: 100%;
+		}
+	}
+	#main {
+		.socials {
+			text-align: center;
+		}
+	}
+}
+@media (min-width: 351px) and (max-width: 480px) {
+	body {
+		font-size: 10px;
+	}
+	.tel-collumn {
+		.tel-number {
+			font-size: 14px;
+			line-height: 3;
+			span {
+				font-size: 15px !important;
+			}
+		}
+		.request {
+			
+		}
+	}
+	.main-content {
+		text-align: center;
+		h1 {
+			font-size: 24px !important;
+		}
+		h2 {
+			font-size: 11px !important;
+			// color: #fff !important;
+		}
+		.calc-btn {
+			.btn_text {
+				font-size: 14px;
+			}
+		}
+	}
+	
+	.contacts-row {
+		line-height: 21px;
+	}
+	footer {
+		position: relative !important;
+		// margin-top: 200px !important;
+		height: auto !important;
+		.footer-col {
+			display: block !important;
+			text-align: center;
+			width: 100% !important;
+		}
+		.footer-col-1_content {
+			position: relative !important;
+		}
+		.footer-col-5 {
+			position: relative !important;
+			display: block !important;
+		    margin-top: 57px !important;
+		    margin-bottom: 67px;
+		    text-align: center !important;
+		}
+		.footer-row {
+			margin-top: 65px;
+		}
+	}
+	.team-row-2 {
+		transform: translateX(0);
+	}
+	.about {
+		padding-left: 0 !important;
+	}
+	.clients-row {
+		&_item {
+			width: 100%;
+		}
+	}
+	#main {
+		.socials {
+			text-align: center;
+		}
+	}
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+	.contacts-row {
+		line-height: 21px;
+	}
+	footer {
+		position: relative !important;
+		// margin-top: 200px !important;
+		height: auto !important;
+		.footer-col {
+			display: block !important;
+			text-align: center;
+			width: 100% !important;
+		}
+		.footer-col-1_content {
+			position: relative !important;
+		}
+		.footer-col-5 {
+			position: relative !important;
+			display: block !important;
+		    margin-top: 57px !important;
+		    margin-bottom: 67px;
+		    text-align: center !important;
+		}
+		.footer-row {
+			margin-top: 65px;
+		}
+	}
+	.team-row-2 {
+		transform: translateX(0);
+	}
+	.about {
+		padding-left: 0 !important;
+	}
+	.clients-row {
+		&_item {
+			width: 100%;
+		}
+	}
+}
 @media (min-width: 768px) and (max-width: 991px) {
 	.container {
 		width: auto;
 		margin: 0 50px;
 		padding: 0;
+	}
+	.team-row-2 {
+		transform: translateX(0);
+	}
+	.about {
+		padding-left: 0 !important;
+	}
+	.clients-row {
+		&_item {
+			width: 32%;width: 32%;
+		}
 	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -469,6 +663,17 @@ footer {
 		width: auto;
 		margin: 0 50px;
 		padding: 0;
+	}
+	.nav-row .menu-collumn .main-menu .menu-item-a {
+		font-size: 10px;
+	}
+	.about {
+		padding-left: 0 !important;
+	}
+	.clients-row {
+		&_item {
+			width: 32%;
+		}
 	}
 }
 @media (min-width: 1200px) and (max-width: 1600px) {
