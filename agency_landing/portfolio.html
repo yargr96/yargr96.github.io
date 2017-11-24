@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>О нас</title>
+    <title>Портфолио</title>
 
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="css/portfolio.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,7 +22,7 @@
     <![endif]-->
   </head>
   <body>
-	<!-- Main section -->
+    <!-- Main section -->
 	<section id="main">
 		<div class="lang">
           <a class="lang_a lang_a_active" href="#">Rus</a>
@@ -47,10 +49,33 @@
           </div> <!-- /nav row -->
     	</div>
     	<div class="main-content">
-    		<div class="container">
-          <h1 class="main-content_header">Превосходя возможности</h1>
-          <p class="main-content_p">Мы не просто команда маркетологов, дизайнеров, директологов, программистов. <br>Мы агентство, помогающее брендам быть привлекательными <br>и понятными для людей и их клиентов.</p>
-        </div>
+			<h1 class="main-content_header">Наши работы</h1>
+			<div class="main-content_buttons">
+				<a class="main-content_buttons-item btn_animated" href="#">
+		            <div class="btn_hover"></div>
+		            <div class="btn_text">Все работы</div>
+	            </a>
+				<a class="main-content_buttons-item btn_animated" href="#">
+		            <div class="btn_hover"></div>
+		            <div class="btn_text">WEB-DESIGN</div>
+	            </a>
+				<a class="main-content_buttons-item btn_animated" href="#">
+		            <div class="btn_hover"></div>
+		            <div class="btn_text">SMM-продвижение</div>
+	            </a>
+				<a class="main-content_buttons-item btn_animated" href="#">
+		            <div class="btn_hover"></div>
+		            <div class="btn_text">айдентика</div>
+	            </a>
+				<a class="main-content_buttons-item btn_animated" href="#">
+		            <div class="btn_hover"></div>
+		            <div class="btn_text">упаковка</div>
+	            </a>
+				<a class="main-content_buttons-item btn_animated" href="#">
+		            <div class="btn_hover"></div>
+		            <div class="btn_text">Продакшн</div>
+	            </a>
+			</div>
     	</div>
     	<div class="contacts">
           <div class="container ">
@@ -67,94 +92,79 @@
         </div>
         <img class="mouse hidden-xs" src="img/mouse.png" alt="sctoll">
 	</section>
-	<section id="about" class="about">
-		<div class="container">
-      <p class="about-p">Like 2 Look - это команда профессионалов в области создания и продвижения бренда. Наши профессиональные навыки <br>позволяют выполнять маркетинговые задачи любой сложности для российских и иностранных компаний. <br>В комплекс наших услуг входит <span>маркетинговый анализ</span>, <span>разработка айдентики</span>, <span>создание веб-сайта</span> и его <span>продвижение</span>, <br>а также <span>разработка рекламной кампании</span>.</p>
-      <p class="about-p">Мы создаем качественный продукт, который способен решать маркетинговые задачи бизнеса. Кроме того, в нашем <br>арсенале имеется ряд уникальных технологических решений для создания креативных идей.</p>
-    </div>
-	</section>
-	<section id="team" class="team">
-		<h2 class="team-header">Наша команда</h2>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3 col-sm-6 team-item">
-					<img src="img/about/team/1.png" alt="" class="team-item_img">
-					<h3 class="team-item_header">Сергей Фоминых</h3>
-					<p class="team-item_p">Генеральный директор / Таргетолог</p>
-					<div class="team-item_socials">
-		                <a href="#"><i class="fa fa-vk"></i></a>
-		                <span>/</span>
-		                <a href="#"><i class="fa fa-instagram"></i></a>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 team-item">
-					<img src="img/about/team/2.png" alt="" class="team-item_img">
-					<h3 class="team-item_header">Артём Галимов</h3>
-					<p class="team-item_p">Соучредитель / Маркетолог</p>
-					<div class="team-item_socials">
-		                <a href="#"><i class="fa fa-vk"></i></a>
-		                <span>/</span>
-		                <a href="#"><i class="fa fa-instagram"></i></a>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 team-item">
-					<img src="img/about/team/3.png" alt="" class="team-item_img">
-					<h3 class="team-item_header">Юрий Сковорода</h3>
-					<p class="team-item_p">Директолог / SMM специалист</p>
-					<div class="team-item_socials">
-		                <a href="#"><i class="fa fa-vk"></i></a>
-		                <span>/</span>
-		                <a href="#"><i class="fa fa-instagram"></i></a>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 team-item">
-					<img src="img/about/team/4.png" alt="" class="team-item_img">
-					<h3 class="team-item_header">Ярослав Яковишин</h3>
-					<p class="team-item_p">Арт-директор / Дизайнер</p>
-					<div class="team-item_socials">
-						<a href="#"><i class="fa fa-behance"></i></a>
-		                <span>/</span>
-		                <a href="#"><i class="fa fa-vk"></i></a>
-		                <span>/</span>
-		                <a href="#"><i class="fa fa-instagram"></i></a>
-					</div>
-				</div>
+	<section class="portfolio">
+		<div class="slider">
+			<div class="slider_item">
+				<h2 class="slider_item_header">Game-First</h2>
+				<h3 class="slider_item_subheader">Landing-page</h3>
+				<img src="img/portfolio/slides/1.png" alt="" class="slider_item_img">
 			</div>
-			<div class="row team-row-2">
-				<div class="col-md-3 col-sm-6 team-item">
-					<img src="img/about/team/5.png" alt="" class="team-item_img">
-					<h3 class="team-item_header">Никита Кретов</h3>
-					<p class="team-item_p">Менеджер продаж</p>
-					<div class="team-item_socials">
-		                <a href="#"><i class="fa fa-vk"></i></a>
-		                <span>/</span>
-		                <a href="#"><i class="fa fa-instagram"></i></a>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 team-item">
-					<img src="img/about/team/6.png" alt="" class="team-item_img">
-					<h3 class="team-item_header">Никита Сорокин</h3>
-					<p class="team-item_p">Контент-менеджер</p>
-					<div class="team-item_socials">
-		                <a href="#"><i class="fa fa-vk"></i></a>
-		                <span>/</span>
-		                <a href="#"><i class="fa fa-instagram"></i></a>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 team-item">
-					<img src="img/about/team/7.png" alt="" class="team-item_img">
-					<h3 class="team-item_header">Никита Ларионов</h3>
-					<p class="team-item_p">Контекстолог</p>
-					<div class="team-item_socials">
-		                <a href="#"><i class="fa fa-vk"></i></a>
-		                <span>/</span>
-		                <a href="#"><i class="fa fa-instagram"></i></a>
-					</div>
-				</div>
+			<div class="slider_item">
+				<h2 class="slider_item_header">Game-First</h2>
+				<h3 class="slider_item_subheader">Landing-page</h3>
+				<img src="img/portfolio/slides/1.png" alt="" class="slider_item_img">
+			</div>
+			<div class="slider_item">
+				<h2 class="slider_item_header">Game-First</h2>
+				<h3 class="slider_item_subheader">Landing-page</h3>
+				<img src="img/portfolio/slides/1.png" alt="" class="slider_item_img">
+			</div>
+			<div class="slider_item">
+				<h2 class="slider_item_header">Game-First</h2>
+				<h3 class="slider_item_subheader">Landing-page</h3>
+				<img src="img/portfolio/slides/1.png" alt="" class="slider_item_img">
+			</div>
+			<div class="slider_item">
+				<h2 class="slider_item_header">Game-First</h2>
+				<h3 class="slider_item_subheader">Landing-page</h3>
+				<img src="img/portfolio/slides/1.png" alt="" class="slider_item_img">
+			</div>
+			<div class="slider_item">
+				<h2 class="slider_item_header">Game-First</h2>
+				<h3 class="slider_item_subheader">Landing-page</h3>
+				<img src="img/portfolio/slides/1.png" alt="" class="slider_item_img">
+			</div>
+			<div class="slider_item">
+				<h2 class="slider_item_header">Game-First</h2>
+				<h3 class="slider_item_subheader">Landing-page</h3>
+				<img src="img/portfolio/slides/1.png" alt="" class="slider_item_img">
 			</div>
 		</div>
 	</section>
-	<section class="clients">
+	<section class="feedback-section" id="feedback-section">
+      <div class="container">
+        <div class="row feedback-section_main-row">
+          <div class="col-md-4 col-sm-6 feedback-section_main-row_offer-col">
+            <p class="feedback-section_main-row_offer-col_offer">Предложение ограничено!</p>
+            <h3 class="feedback-section_main-row_offer-col_header">Сайт под ключ <br><span>за 0 рублей!</span></h3>
+            <p class="feedback-section_main-row_offer-col_text">Хочешь продвигать бизнес в сети? Успевай оставить <br>заявку и наблюдай за увеличением продаж! <br>Акция действительна до 29.10.2017 г.</p>
+          </div>
+          <!-- Форма -->
+          <div class="col-md-4 col-sm-6 feedback-section_form-col">
+            <div class="feedback-section_form-col_form">
+              <form action="#">
+                <!-- <p class="">Введите <span>Ваше имя</span> (необяз.):</p> -->
+                <input class="name-input" type="text" placeholder="Введите ваше имя">
+                <!-- <p class="">Введите <span>Ваши телефон и email:</span></p> -->
+                <input id="phone-input" class="phone-input" type="tel" placeholder="+7           ( 999 )          999-99-99">
+                <div class="phone-bg">
+                  <div class="phone-bg-item phone-bg-item-1"></div>
+                  <div class="phone-bg-item phone-bg-item-2"></div>
+                  <div class="phone-bg-item phone-bg-item-3"></div>
+                </div>
+                <input type="email" class="email-input" placeholder="Введите Ваш email">
+                <button class="btn_animated" type="submit">
+                  <div class="btn_hover"></div>
+                  <div class="btn_text">Узнать условия акции</div></a>
+                </button>
+              </form>
+              <p><img src="img/clock.png" alt="clock"> Ответ в течение 15 минут</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="clients">
 		<h2 class="clients-header">Наши клиенты</h2>
 		<p class="clients-p">Мы были вовлечены в создание решений для брендов, таких как</p>
 		<div class="container">
@@ -207,11 +217,29 @@
             </div>
           </div>
         </div>
-      </footer>
-      
+    </footer>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Masked Input -->
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <!-- Slick -->
+    <script src="slick/slick.js"></script>
+    <script>
+    	$(document).ready(function(){
+    		$('.slider').slick({
+    			slidesToShow: 5,
+    			infinite: true,
+    		});
+    	});
+    </script>
+
+    <!-- Маска для телефона -->
+    <script>
+    jQuery(function($) {
+      $('#phone-input').mask("+7           (999)          999-9999");
+      })
+    </script>
   </body>
 </html>
