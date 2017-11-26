@@ -95,9 +95,19 @@
 	<section class="portfolio">
 		<div class="slider">
 			<div class="slider_item">
-				<h2 class="slider_item_header">Game-First</h2>
-				<h3 class="slider_item_subheader">Landing-page</h3>
+				<h2 class="slider_item_header">КиноНочь</h2>
+				<h3 class="slider_item_subheader">Афиша</h3>
 				<img src="img/portfolio/slides/1.png" alt="" class="slider_item_img">
+			</div>
+			<div class="slider_item">
+				<h2 class="slider_item_header">Расцветай</h2>
+				<h3 class="slider_item_subheader">Упаковка франшизы</h3>
+				<img src="img/portfolio/slides/2.png" alt="" class="slider_item_img">
+			</div>
+			<div class="slider_item">
+				<h2 class="slider_item_header">Friday 13</h2>
+				<h3 class="slider_item_subheader">Упаковка мероприятия</h3>
+				<img src="img/portfolio/slides/3.png" alt="" class="slider_item_img">
 			</div>
 			<div class="slider_item">
 				<h2 class="slider_item_header">Game-First</h2>
@@ -105,32 +115,25 @@
 				<img src="img/portfolio/slides/1.png" alt="" class="slider_item_img">
 			</div>
 			<div class="slider_item">
-				<h2 class="slider_item_header">Game-First</h2>
+				<h2 class="slider_item_header">Promo-hub</h2>
 				<h3 class="slider_item_subheader">Landing-page</h3>
-				<img src="img/portfolio/slides/1.png" alt="" class="slider_item_img">
+				<img src="img/portfolio/slides/5.png" alt="" class="slider_item_img">
 			</div>
 			<div class="slider_item">
-				<h2 class="slider_item_header">Game-First</h2>
-				<h3 class="slider_item_subheader">Landing-page</h3>
-				<img src="img/portfolio/slides/1.png" alt="" class="slider_item_img">
+				<h2 class="slider_item_header">Резиденция Деда Мороза</h2>
+				<h3 class="slider_item_subheader">Упаковка мероприятия</h3>
+				<img src="img/portfolio/slides/6.png" alt="" class="slider_item_img">
 			</div>
 			<div class="slider_item">
-				<h2 class="slider_item_header">Game-First</h2>
-				<h3 class="slider_item_subheader">Landing-page</h3>
-				<img src="img/portfolio/slides/1.png" alt="" class="slider_item_img">
-			</div>
-			<div class="slider_item">
-				<h2 class="slider_item_header">Game-First</h2>
-				<h3 class="slider_item_subheader">Landing-page</h3>
-				<img src="img/portfolio/slides/1.png" alt="" class="slider_item_img">
-			</div>
-			<div class="slider_item">
-				<h2 class="slider_item_header">Game-First</h2>
-				<h3 class="slider_item_subheader">Landing-page</h3>
-				<img src="img/portfolio/slides/1.png" alt="" class="slider_item_img">
+				<h2 class="slider_item_header">Danceem</h2>
+				<h3 class="slider_item_subheader">Афиша</h3>
+				<img src="img/portfolio/slides/7.png" alt="" class="slider_item_img">
 			</div>
 		</div>
 	</section>
+  <section class="slider-section">
+    
+  </section>
 	<section class="feedback-section" id="feedback-section">
       <div class="container">
         <div class="row feedback-section_main-row">
@@ -230,10 +233,52 @@
     	$(document).ready(function(){
     		$('.slider').slick({
     			slidesToShow: 5,
-    			infinite: true,
+    			infinite: false,
+          centerMode: true,
+          // variableWidth: true,
+          // centerPadding: '0px',
+          responsive: [
+            {
+              breakpoint: 1600,
+              settings: {
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3,
+                arrows: false
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+              }
+            },
+            {
+              breakpoint: 350,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+              }
+            }
+          ]
     		});
     	});
     </script>
+    <script src="js/slider.js"></script>
+    <script src="js/init.js"></script>
+
 
     <!-- Маска для телефона -->
     <script>
