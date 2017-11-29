@@ -97,6 +97,7 @@ a {
 	&:hover, &:focus {
 		text-decoration: none;
 		color: #fff;
+		outline: none;
 	}
 }
 ul {
@@ -387,6 +388,9 @@ hr {
 				height: 187px;
 				position: relative;
 				z-index: 2;
+				&:hover {
+
+				}
 			}
 			&_img_back {
 				position: absolute;
@@ -413,12 +417,11 @@ hr {
 				top: 240px;
 				left: 50%;
 			}
-		}
-		.slick {
-			&-slide {
-				position: relative;
-				&:focus {
-					outline: none;
+			&_link {
+				&:hover {
+					&:before {
+						opacity: 1;
+					}
 				}
 				&:before {
 					content: '';
@@ -435,9 +438,16 @@ hr {
 					transition: opacity .3s ease-in-out;
 				}
 			}
+		}
+		.slick {
+			&-slide {
+				position: relative;
+				&:focus {
+					outline: none;
+				}
+			}
 			&-center {
-				transition: all .3s;
-				// width: 400px;
+				transition: all .3s ease-in-out;
 				.slider_item_header {
 					margin-top: -25px;
 					transform: scale(1.31);
@@ -449,6 +459,7 @@ hr {
 				.slider_item_img {
 					transform: scale(1.2);
 					position: relative;
+					transition: transform .3s .2s;
 					
 				}
 				.slider_item_img_front {
@@ -460,24 +471,12 @@ hr {
 					transform: scale(1);
 					transition: transform .7s ease-in-out .3s;
 				}
-				&:before {
-					content: '';
-					background-image: url(../img/portfolio/slides/lens.png);
-					position: absolute;
-					left: 50%;
-					top: 50%;
-					height: 62px;
-					width: 62px;
-					margin-left: -31px;
-					margin-top: -26px;
-					z-index: 3;
-					opacity: 1;
-					transition: opacity .3s ease-in-out;
-				}
 			}
 			&-arrow {
 				width: 90px;
 				height: 90px;
+				top: 59%;
+				margin-top: -45px;
 				&:before {
 					content: '';
 					height: 90px;
@@ -504,7 +503,7 @@ hr {
 			}
 			&-prev {
 				left: 40%;
-				top: 270px;
+				// top: 270px;
 				z-index: 2;
 				&:before {
 					transform: rotate(45deg);
@@ -513,7 +512,7 @@ hr {
 			}
 			&-next {
 				right: 40%;
-				top: 270px;
+				// top: 270px;
 				&:before {
 					transform: rotate(225deg);
 					right: 0;
@@ -911,6 +910,7 @@ footer {
 		}
 	}
 }
+
 /**************** Media ****************/
 
 @media (max-width: 350px) {
@@ -1115,7 +1115,6 @@ footer {
 	}
 	.portfolio .slider .slick-next {
 		right: 9%;
-		top: 210px;
 		&:before {
 			height: 50px;
 			width: 50px;
@@ -1123,7 +1122,6 @@ footer {
 	}
 	.portfolio .slider .slick-prev {
 		left: 9%;
-		top: 210px;
 		&:before {
 			height: 50px;
 			width: 50px;
@@ -1193,6 +1191,20 @@ footer {
 	}
 	.feedback-section_form-col_form form input {
 		font-size: 14px;
+	}
+	.portfolio .slider .slick-next {
+		right: 9%;
+		&:before {
+			height: 50px;
+			width: 50px;
+		}
+	}
+	.portfolio .slider .slick-prev {
+		left: 9%;
+		&:before {
+			height: 50px;
+			width: 50px;
+		}
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
