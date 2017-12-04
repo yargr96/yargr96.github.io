@@ -20,6 +20,7 @@ $(document).ready(function() {
 		return false;
 	});
 
+
 	//Табы
 	$('.category-content-item_btn').click(function() {
 		if(!$(this).hasClass('category-content-item_btn_active')) {
