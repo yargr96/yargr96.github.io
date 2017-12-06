@@ -177,12 +177,14 @@
         </div>
       </header>
     </div>
+
+    <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
       <div class="portfolio_item portfolio_item-1 i-lazy i-lazy_cover" data-original="img/cases/1.jpg" data-id="1">
         <div class="portfolio_item_cover portfolio-item_cover-1">
           <div class="portfolio_item_cover_content">
-            <h3 class="portfolio_item_cover_header">Производство скиналей <br>из Беларуси</h3>
-            <a onclick="showCase()" class="portfolio_item_cover_btn btn_animated" href="#case-1">
+            <h3 class="portfolio_item_cover_header">Концентрат молодости <br>«Расцветай»</h3>
+            <a id="show_case-1" class="portfolio_item_cover_btn btn_animated" href="#case-1">
               <div class="btn_hover"></div>
               <div class="btn_text">Нажмите для просмотра</div></a>
           </div>
@@ -192,7 +194,7 @@
         <div class="portfolio_item_cover portfolio-item_cover-2">
           <div class="portfolio_item_cover_content">
             <h3 class="portfolio_item_cover_header">Производство скиналей из <br>Беларуси</h3>
-            <a onclick="showCase()" class="portfolio_item_cover_btn btn_animated" href="#case-1">
+            <a id="show_case-2" class="portfolio_item_cover_btn btn_animated" href="#case-1">
               <div class="btn_hover"></div>
               <div class="btn_text">Нажмите для просмотра</div></a>
             </a>
@@ -203,7 +205,7 @@
         <div class="portfolio_item_cover portfolio-item_cover-3">
           <div class="portfolio_item_cover_content">
             <h3 class="portfolio_item_cover_header">Производство скиналей из <br>Беларуси</h3>
-            <a onclick="showCase()" class="portfolio_item_cover_btn btn_animated" href="#case-1">
+            <a id="show_case-3" class="portfolio_item_cover_btn btn_animated" href="#case-1">
               <div class="btn_hover"></div>
               <div class="btn_text">Нажмите для просмотра</div></a>
             </a>
@@ -214,7 +216,7 @@
         <div class="portfolio_item_cover portfolio-item_cover-4">
           <div class="portfolio_item_cover_content">
             <h3 class="portfolio_item_cover_header">Производство скиналей из <br>Беларуси</h3>
-            <a onclick="showCase()" class="portfolio_item_cover_btn btn_animated" href="#case-1">
+            <a id="show_case-4" class="portfolio_item_cover_btn btn_animated" href="#case-1">
               <div class="btn_hover"></div>
               <div class="btn_text">Нажмите для просмотра</div></a>
             </a>
@@ -225,7 +227,7 @@
         <div class="portfolio_item_cover portfolio-item_cover-5">
           <div class="portfolio_item_cover_content">
             <h3 class="portfolio_item_cover_header">Производство скиналей из <br>Беларуси</h3>
-            <a onclick="showCase()" class="portfolio_item_cover_btn btn_animated" href="#case-1">
+            <a id="show_case-5" class="portfolio_item_cover_btn btn_animated" href="#case-1">
               <div class="btn_hover"></div>
               <div class="btn_text">Нажмите для просмотра</div></a>
             </a>
@@ -236,7 +238,7 @@
         <div class="portfolio_item_cover portfolio-item_cover-5">
           <div class="portfolio_item_cover_content">
             <h3 class="portfolio_item_cover_header">Производство скиналей из <br>Беларуси</h3>
-            <a onclick="showCase()" class="portfolio_item_cover_btn btn_animated" href="#case-1">
+            <a id="show_case-6" class="portfolio_item_cover_btn btn_animated" href="#case-1">
               <div class="btn_hover"></div>
               <div class="btn_text">Нажмите для просмотра</div></a>
             </a>
@@ -327,20 +329,29 @@
     </section>
 
     <!-- Cases popups -->
+    
     <div id="case-1" class="popup-case">
       <div class="popup-case_preview">
         <div class="popup-case_preview-i">
-          <div class="popup-case_preview-i1">
-            
+          <div class="popup-case_preview-i2">
+            <img class="i-lazy" data-original="img/cases/big/1.jpg" src="img/empty.png" alt="">
           </div>
         </div>
       </div>
       <div class="popup-case_column">
-        <div class="popup-case_column_close" onclick="hideCase()">
+        <div class="popup-case_column_close">
           <div class="popup-case_column_close-text">Закрыть</div>
           <div class="popup-case_column_close-l"></div>
           <div class="popup-case_column_close-x">Х</div>
         </div>
+        <a target="_blank" href="img/cases/big/1.jpg">
+          <div class="popup-case_enlarge">
+            <div class="popup-case_enlarge-text">Увеличить</div>
+            <div class="popup-case_enlarge-l"></div>
+            <div class="popup-case_enlarge-x"><img src="img/fullscreen.png
+              " alt=""></div>
+          </div>
+        </a>
         <div class="popup-case_column_l"></div>
         <div class="popup-case_column_content">
           <h2 class="popup-case_column_header">Концентрат молодости «Расцветай»</h2>
@@ -349,6 +360,267 @@
             <li class="popup-case_column_li">Настройка Яндекс директа</li>
             <li class="popup-case_column_li">Упаковка франшизы</li>
           </ul>
+          <a href="img/cases/big/1.jpg" class="popup-case_link">Смотреть превью</a>
+          <a class="calc-btn btn_animated" href="#">
+            <div class="btn_hover"></div>
+            <div class="btn_text">Рассчитать стоимость</div>
+          </a>
+        </div>
+        <div class="popup-case_column_icons">
+          <div class="popup-case_column_icons-group socials">
+            <a href="#"><i class="fa fa-link"></i></a>
+            <span>/</span>
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <span>/</span>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+          </div>
+          <div class="popup-case_column_icons-like">
+            <i class="fa fa-heart-o"></i>
+            <span>17</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="case-2" class="popup-case">
+      <div class="popup-case_preview">
+        <div class="popup-case_preview-i">
+          <div class="popup-case_preview-i2">
+            <img class="i-lazy" data-original="img/cases/big/2.jpg" src="img/empty.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="popup-case_column">
+        <div class="popup-case_column_close">
+          <div class="popup-case_column_close-text">Закрыть</div>
+          <div class="popup-case_column_close-l"></div>
+          <div class="popup-case_column_close-x">Х</div>
+        </div>
+        <a target="_blank" href="img/cases/big/2.jpg">
+          <div class="popup-case_enlarge">
+            <div class="popup-case_enlarge-text">Увеличить</div>
+            <div class="popup-case_enlarge-l"></div>
+            <div class="popup-case_enlarge-x"><img src="img/fullscreen.png
+              " alt=""></div>
+          </div>
+        </a>
+        <div class="popup-case_column_l"></div>
+        <div class="popup-case_column_content">
+          <h2 class="popup-case_column_header">Концентрат молодости «Расцветай»</h2>
+          <ul class="popup-case_column_ul">
+            <li class="popup-case_column_li">SMM продвижение</li>
+            <li class="popup-case_column_li">Настройка Яндекс директа</li>
+            <li class="popup-case_column_li">Упаковка франшизы</li>
+          </ul>
+          <a href="img/cases/big/1.jpg" class="popup-case_link">Смотреть превью</a>
+          <a class="calc-btn btn_animated" href="#">
+            <div class="btn_hover"></div>
+            <div class="btn_text">Рассчитать стоимость</div>
+          </a>
+        </div>
+        <div class="popup-case_column_icons">
+          <div class="popup-case_column_icons-group socials">
+            <a href="#"><i class="fa fa-link"></i></a>
+            <span>/</span>
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <span>/</span>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+          </div>
+          <div class="popup-case_column_icons-like">
+            <i class="fa fa-heart-o"></i>
+            <span>17</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="case-3" class="popup-case">
+      <div class="popup-case_preview">
+        <div class="popup-case_preview-i">
+          <div class="popup-case_preview-i2">
+            <img class="i-lazy" data-original="img/cases/big/3.jpg" src="img/empty.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="popup-case_column">
+        <div class="popup-case_column_close">
+          <div class="popup-case_column_close-text">Закрыть</div>
+          <div class="popup-case_column_close-l"></div>
+          <div class="popup-case_column_close-x">Х</div>
+        </div>
+        <a target="_blank" href="img/cases/big/3.jpg">
+          <div class="popup-case_enlarge">
+            <div class="popup-case_enlarge-text">Увеличить</div>
+            <div class="popup-case_enlarge-l"></div>
+            <div class="popup-case_enlarge-x"><img src="img/fullscreen.png
+              " alt=""></div>
+          </div>
+        </a>
+        <div class="popup-case_column_l"></div>
+        <div class="popup-case_column_content">
+          <h2 class="popup-case_column_header">Концентрат молодости «Расцветай»</h2>
+          <ul class="popup-case_column_ul">
+            <li class="popup-case_column_li">SMM продвижение</li>
+            <li class="popup-case_column_li">Настройка Яндекс директа</li>
+            <li class="popup-case_column_li">Упаковка франшизы</li>
+          </ul>
+          <a href="img/cases/big/1.jpg" class="popup-case_link">Смотреть превью</a>
+          <a class="calc-btn btn_animated" href="#">
+            <div class="btn_hover"></div>
+            <div class="btn_text">Рассчитать стоимость</div>
+          </a>
+        </div>
+        <div class="popup-case_column_icons">
+          <div class="popup-case_column_icons-group socials">
+            <a href="#"><i class="fa fa-link"></i></a>
+            <span>/</span>
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <span>/</span>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+          </div>
+          <div class="popup-case_column_icons-like">
+            <i class="fa fa-heart-o"></i>
+            <span>17</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="case-4" class="popup-case">
+      <div class="popup-case_preview">
+        <div class="popup-case_preview-i">
+          <div class="popup-case_preview-i2">
+            <img class="i-lazy" data-original="img/cases/big/5.jpg" src="img/empty.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="popup-case_column">
+        <div class="popup-case_column_close">
+          <div class="popup-case_column_close-text">Закрыть</div>
+          <div class="popup-case_column_close-l"></div>
+          <div class="popup-case_column_close-x">Х</div>
+        </div>
+        <a target="_blank" href="img/cases/big/4.jpg">
+          <div class="popup-case_enlarge">
+            <div class="popup-case_enlarge-text">Увеличить</div>
+            <div class="popup-case_enlarge-l"></div>
+            <div class="popup-case_enlarge-x"><img src="img/fullscreen.png
+              " alt=""></div>
+          </div>
+        </a>
+        <div class="popup-case_column_l"></div>
+        <div class="popup-case_column_content">
+          <h2 class="popup-case_column_header">Концентрат молодости «Расцветай»</h2>
+          <ul class="popup-case_column_ul">
+            <li class="popup-case_column_li">SMM продвижение</li>
+            <li class="popup-case_column_li">Настройка Яндекс директа</li>
+            <li class="popup-case_column_li">Упаковка франшизы</li>
+          </ul>
+          <a href="img/cases/big/1.jpg" class="popup-case_link">Смотреть превью</a>
+          <a class="calc-btn btn_animated" href="#">
+            <div class="btn_hover"></div>
+            <div class="btn_text">Рассчитать стоимость</div>
+          </a>
+        </div>
+        <div class="popup-case_column_icons">
+          <div class="popup-case_column_icons-group socials">
+            <a href="#"><i class="fa fa-link"></i></a>
+            <span>/</span>
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <span>/</span>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+          </div>
+          <div class="popup-case_column_icons-like">
+            <i class="fa fa-heart-o"></i>
+            <span>17</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="case-5" class="popup-case">
+      <div class="popup-case_preview">
+        <div class="popup-case_preview-i">
+          <div class="popup-case_preview-i2">
+            <img class="i-lazy" data-original="img/cases/big/5.jpg" src="img/empty.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="popup-case_column">
+        <div class="popup-case_column_close">
+          <div class="popup-case_column_close-text">Закрыть</div>
+          <div class="popup-case_column_close-l"></div>
+          <div class="popup-case_column_close-x">Х</div>
+        </div>
+        <a target="_blank" href="img/cases/big/5.jpg">
+          <div class="popup-case_enlarge">
+            <div class="popup-case_enlarge-text">Увеличить</div>
+            <div class="popup-case_enlarge-l"></div>
+            <div class="popup-case_enlarge-x"><img src="img/fullscreen.png
+              " alt=""></div>
+          </div>
+        </a>
+        <div class="popup-case_column_l"></div>
+        <div class="popup-case_column_content">
+          <h2 class="popup-case_column_header">Концентрат молодости «Расцветай»</h2>
+          <ul class="popup-case_column_ul">
+            <li class="popup-case_column_li">SMM продвижение</li>
+            <li class="popup-case_column_li">Настройка Яндекс директа</li>
+            <li class="popup-case_column_li">Упаковка франшизы</li>
+          </ul>
+          <a href="img/cases/big/1.jpg" class="popup-case_link">Смотреть превью</a>
+          <a class="calc-btn btn_animated" href="#">
+            <div class="btn_hover"></div>
+            <div class="btn_text">Рассчитать стоимость</div>
+          </a>
+        </div>
+        <div class="popup-case_column_icons">
+          <div class="popup-case_column_icons-group socials">
+            <a href="#"><i class="fa fa-link"></i></a>
+            <span>/</span>
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <span>/</span>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+          </div>
+          <div class="popup-case_column_icons-like">
+            <i class="fa fa-heart-o"></i>
+            <span>17</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="case-6" class="popup-case">
+      <div class="popup-case_preview">
+        <div class="popup-case_preview-i">
+          <div class="popup-case_preview-i2">
+            <img class="i-lazy" data-original="img/cases/big/6.jpg" src="img/empty.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="popup-case_column">
+        <div class="popup-case_column_close">
+          <div class="popup-case_column_close-text">Закрыть</div>
+          <div class="popup-case_column_close-l"></div>
+          <div class="popup-case_column_close-x">Х</div>
+        </div>
+        <a target="_blank" href="img/cases/big/6.jpg">
+          <div class="popup-case_enlarge">
+            <div class="popup-case_enlarge-text">Увеличить</div>
+            <div class="popup-case_enlarge-l"></div>
+            <div class="popup-case_enlarge-x"><img src="img/fullscreen.png
+              " alt=""></div>
+          </div>
+        </a>
+        <div class="popup-case_column_l"></div>
+        <div class="popup-case_column_content">
+          <h2 class="popup-case_column_header">Концентрат молодости «Расцветай»</h2>
+          <ul class="popup-case_column_ul">
+            <li class="popup-case_column_li">SMM продвижение</li>
+            <li class="popup-case_column_li">Настройка Яндекс директа</li>
+            <li class="popup-case_column_li">Упаковка франшизы</li>
+          </ul>
+          <a href="img/cases/big/1.jpg" class="popup-case_link">Смотреть превью</a>
           <a class="calc-btn btn_animated" href="#">
             <div class="btn_hover"></div>
             <div class="btn_text">Рассчитать стоимость</div>
@@ -380,9 +652,10 @@
     <script src="js/jquery.lazyload.min.js"></script>
     <!-- Circle progress -->
     <script src="js/circle-progress.min.js"></script>
-    <script src="js/jquery.lazyload.min.js"></script>
     <!-- Masked Input -->
     <script src="js/jquery.maskedinput.min.js"></script>
+    <!-- Nice Scroll -->
+    <script src="js/jquery.nicescroll.min.js"></script>
     <!-- Прокрутка -->
     <script src="js/headroom.js"></script>
     <script src="js/smothscroll.js"></script>
