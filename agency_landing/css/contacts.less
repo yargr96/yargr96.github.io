@@ -1,19 +1,5 @@
 /* ====================== Fonts ======================*/
 @font-face {
-	font-family: 'Conv_Fontfabric - MullerBold';
-	src: url('fonts/Fontfabric - MullerBold.eot');
-	src: local('☺'), url('fonts/Fontfabric - MullerBold.woff') format('woff'), url('fonts/Fontfabric - MullerBold.ttf') format('truetype'), url('fonts/Fontfabric - MullerBold.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Conv_cinzel-bold_[allfont.ru]';
-	src: url('fonts/cinzel-bold_[allfont.ru].eot');
-	src: local('☺'), url('fonts/cinzel-bold_[allfont.ru].woff') format('woff'), url('fonts/cinzel-bold_[allfont.ru].ttf') format('truetype'), url('fonts/cinzel-bold_[allfont.ru].svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
 	font-family: 'Conv_Stem-Medium';
 	src: url('fonts/Stem-Medium.eot');
 	src: local('☺'), url('fonts/Stem-Medium.woff') format('woff'), url('fonts/Stem-Medium.ttf') format('truetype'), url('fonts/Stem-Medium.svg') format('svg');
@@ -35,23 +21,21 @@
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Conv_Oraqle Script';
-	src: url('fonts/Oraqle Script.eot');
-	src: local('☺'), url('fonts/Oraqle Script.woff') format('woff'), url('fonts/Oraqle Script.ttf') format('truetype'), url('fonts/Oraqle Script.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
 	font-family: 'Conv_Stem-Bold';
 	src: url('fonts/Stem-Bold.eot');
 	src: local('☺'), url('fonts/Stem-Bold.woff') format('woff'), url('fonts/Stem-Bold.ttf') format('truetype'), url('fonts/Stem-Bold.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
-/* ====================== Font Classes ======================*/
-.muller {
-	font-family: 'Conv_Fontfabric - MullerBold';
+@font-face {
+	font-family: 'Conv_Stem-ExtraLight';
+	src: url('fonts/Stem-ExtraLight.eot');
+	src: local('☺'), url('fonts/Stem-ExtraLight.woff') format('woff'), url('fonts/Stem-ExtraLight.ttf') format('truetype'), url('fonts/Stem-ExtraLight.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
+
+/* ====================== Font Classes ======================*/
 .stem-reg {
 	font-family: 'Conv_Stem-Regular';
 }
@@ -64,12 +48,10 @@
 .stem-med {
 	font-family: 'Conv_Stem-Medium';
 }
-.oracle {
-	font-family: 'Conv_Oraqle Script';
+.xl {
+	font-family: 'Conv_Stem-ExtraLight';
 }
-.cinzel {
-	font-family: 'Conv_cinzel-bold_[allfont.ru]';
-}
+
 /* ====================== Base colors ======================*/
 @base-black: #141414;
 @base-blue: #01a7e3;
@@ -78,6 +60,7 @@
 /* ====================== Base settings ======================*/
 html, body {
 	position: relative;
+	height: 100%;
 
 }
 
@@ -86,6 +69,7 @@ a {
 	&:hover, &:focus {
 		text-decoration: none;
 		color: #fff;
+		outline: none;
 	}
 }
 ul {
@@ -100,11 +84,100 @@ hr {
 	height: 1px;
 	border: none;
 }
-
+//Кнопака с ховером
+.btn_animated {
+	border: 1px solid #393939;
+	display: inline-block;
+	padding:15px 32px;
+	border-radius: 50px;
+	background-color: transparent;
+	-webkit-transition: background-color .2s ease-out, color .2s ease-out;
+	transition: background-color .2s ease-out, color .2s ease-out;
+	-webkit-transition: border .5s ease-out, color .5s ease-out;
+	transition: border .5s ease-out, color .5s ease-out;
+	-webkit-transition: color .2s ease-out, color .2s ease-out;
+	transition: color .2s ease-out, color .2s ease-out;
+	position: relative;
+	&:hover {
+		border: 1px solid @base-blue;
+		color: #fff;
+		.btn_hover {
+			width: 100.5%;
+			&:before {
+				opacity: 1;
+				-webkit-transform: translate3d(0, 0, 0);
+						transform: translate3d(0, 0, 0);
+				-webkit-transition: opacity .2s ease-out, -webkit-transform .2s ease-out;
+				transition: opacity .2s ease-out, -webkit-transform .2s ease-out;
+				transition: transform .2s ease-out, opacity .2s ease-out;
+				transition: transform .2s ease-out, opacity .2s ease-out, -webkit-transform .2s ease-out;
+				z-index: 1;
+				border-radius: 50px;
+			}
+			&:after {
+				opacity: 1;
+				-webkit-transition: opacity 0s .25s ease-out;
+				transition: opacity 0s .25s ease-out;
+				z-index: 1;
+				border-radius: 50px;
+			}
+		}
+		.btn_text {
+			color: #fff;
+		}
+	}
+	.btn_hover {
+		position: absolute;
+		top: -1px;
+		left: -1px;
+		right: -1px;
+		bottom: -1px;
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background-image: -webkit-linear-gradient(left, @base-blue 0%, @base-blue 50%, @base-blue 100%);
+			background-image: linear-gradient(to right, @base-blue 0%, @base-blue 50%, @base-blue 100%);
+			opacity: 0;
+			-webkit-transition: opacity .2s ease-out, -webkit-transform 0 ease-out;
+			transition: opacity .2s ease-out, -webkit-transform 0 ease-out;
+			transition: transform 0 ease-out, opacity .2s ease-out;
+			transition: transform 0 ease-out, opacity .2s ease-out, -webkit-transform 0 ease-out;
+			-webkit-transform: scale3d(0.7, 1, 1);
+					transform: scale3d(0.7, 1, 1);
+			border-radius: 50px;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-image: -webkit-linear-gradient(left, @base-blue 0%, @base-blue 50%, @base-blue 100%);
+			background-image: linear-gradient(to right, @base-blue 0%, @base-blue 50%, @base-blue 100%);
+			opacity: 0;
+			-webkit-transition: opacity .4s ease-out;
+					transition: opacity .4s ease-out;
+			border-radius: 50px;
+		}
+	}
+	.btn_text {
+		.stem-reg;
+		font-size: 12px;
+		letter-spacing: .8px;
+		color: #dcdcdc;
+		position: relative;
+		z-index: 2;
+	}
+}
 
 /* ====================== Main settings ======================*/
 #main {
-	background: #101010 url(../img/about/main-bg.jpg) no-repeat center center;
+	background: #101010 url(../img/contacts/main-bg.jpg) no-repeat center center;
 	background-size: cover;
 	padding: 50px 0;
 	height: 100vh;
@@ -192,11 +265,13 @@ hr {
 		.stem-bold;
 		color: #fff;
 		margin: 0 0 30px 0;
+		max-width: 650px;
+		display: inline-block;
 	}
 	&_p {
-		.stem-reg;
-		font-size: 14px;
-		color: #9a9a9a;
+		.stem-thin;
+		font-size: 45px;
+		color: #fff;
 	}
 }
 // Соц сети
@@ -259,76 +334,168 @@ hr {
 	margin-left: -11.5px;
 }
 
-/**************** About section ****************/
-#about {
-	.stem-reg;
-	font-size: 16px;
-	color: #1f1f1f;
-	padding: 150px 0 150px 111px;
-	span {
-		.stem-med;
-		border-bottom: 1px #1f1f1f dotted;
-	}
-}
+/*===================== Contacts section =====================*/
+.contacts-sect {
+	padding: 100px 0;
+	background-color: #f8f8f8;
+	&_column {
+		position: relative;
+		padding-left: 13%;
+		&_wrapper {
+			position: relative;
+		}
+		&_side {
+			
+			position: absolute;
+			left: -75px;
+			top: 103%;
+			transform: rotate(-90deg);
+			transform-origin: left top;
 
-/**************** Team section ****************/
-.team {
-	overflow: hidden;
-	background-color: #070707;
-	text-align: center;
-	padding: 100px 0 100px 0;
-	&-header {
-		.stem-bold;
-		color: #f8f8f8;
-		font-size: 36px;
-		margin-bottom: 90px;
-	}
-	&-item {
-		&_img {
-
-		}
-		&_header {
-			color: #fff;
-			.stem-med;
-			font-size: 20px;
-		}
-		&_p {
-			color: #9a9a9a;
-			.stem-reg;
-			font-size: 12px;
-		}
-		&_socials {
-			letter-spacing: 3.4px;
-			font-size: 16px;
-			padding-left: 16px;
-			.fa-instagram {
-				font-size: 17px;
-			}
-			i {
-				color: @base-gray;
-				transition: all .3s;
-			}
-			a:hover {
-				i {
-					color: #17b3eb;
-					text-shadow: 0px 4px 14px rgba(23,179,235,1);
-				}
-			}
 			span {
 				.stem-thin;
-				font-size: 26px;
+				font-size: 28px;
+				color: @base-gray;
+			}
+		}
+		&_header {
+			.xl;
+			font-size: 28px;
+			color: @base-blue;
+			margin-top: 10px;
+			margin-bottom: 33px;
+		}
+		&_p {
+			.xl;
+			font-size: 22px;
+			color: #262626;
+			line-height: 30px;
+			margin-bottom: 30px;
+			a {
+				color: #262626;
+				transition: color .2s;
+				&:hover {
+					color: @base-blue;
+				}
 			}
 		}
 	}
-	&-row-2 {
-		margin-top: 30px;
-		transform: translateX(12.5%);
+	&_form-col {
+		.contacts-sect_column_side {
+			top: 88%;
+		}
+		form {
+			display: inline-block;
+			margin-top: -25px;
+			margin-bottom: 10px;
+			position: relative;
+			color: @base-gray;
+			p {
+				color: @base-gray;
+				font-size: 14px;
+				text-align: left;
+				.stem-reg;
+				span {
+					color: #262626;
+				}
+			}
+
+			input {
+				width: 275px;
+				height: 55px;
+				border-radius: 100px;
+				margin-bottom: 9px;
+				border: none;
+				padding-left: 45px;
+				border-top: 3px solid rgba(0, 0, 0, .3);
+				background-repeat: no-repeat;
+				background-position: 24px center;
+				&:focus {
+					outline: none;
+				}
+			}
+			.phone-bg {
+				position: absolute;
+				// top: 124px;
+				top: 124px;
+				left: 0;
+				height: 55px;
+				width: 283px;
+				&-item {
+					display: inline-block;
+					background-color: #fff;
+					height: 100%;
+					margin-right: 4px;
+					&-1 {
+						width: 77px;
+						border-top-left-radius: 50px;
+						border-bottom-left-radius: 50px;
+						border-top-right-radius: 20px;
+						border-bottom-right-radius: 20px;
+						border-top: 3px solid rgba(0,0,0,.3)
+					}
+					&-2 {
+						width: 70px;
+						border-radius: 12px;
+						border-top: 3px solid rgba(0,0,0,.3)
+					}
+					&-3 {
+						width: 112px;
+						margin: 0;
+						border-radius: 20px 50px 50px 20px;
+						border-top: 3px solid rgba(0,0,0,.3)
+					}
+				}
+			}
+			.name-input {
+				background-image: url(../img/persone.png);
+			}
+			.phone-input {
+				background-image: url(../img/phone.png);
+				background-color: transparent;
+				position: relative;z-index: 2;
+				border: none;
+			}
+			.email-input {
+				background-image: url(../img/persone.png);
+			}
+			button {
+				width: 275px;
+				margin-top: 4px;
+				height: 55px;
+				border-color: @base-blue;
+				display: block;
+				.btn_text {
+					color: #222;
+					.stem-med;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+			.form-answer {
+				margin-top: 10px;
+				text-align: center;
+			}
+		}
 	}
 }
-/**************** Clients section ****************/
+
+/*======================= Map Section =======================*/
+.map {
+	padding: 30px 3%;
+	background-color: #f8f8f8;
+	&-container {
+		width: 100%;
+		height: 500px;
+	}
+}
+
+/*===================== Clients section =====================*/
 .clients {
 	padding: 65px 0 65px 0;
 	text-align: center;
+	background-color: #f8f8f8;
 	&-header {
 		color: #101010;
 		.stem-bold;
@@ -347,7 +514,9 @@ hr {
 		}
 	}
 }
-//Footer
+
+
+/*======================= Footer =======================*/
 footer {
 	a {
 		transition: all .3s;
@@ -456,7 +625,6 @@ footer {
 		}
 	}
 }
-
 
 /**************** Media ****************/
 
