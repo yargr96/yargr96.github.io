@@ -14,6 +14,8 @@
     <!-- Custom style -->
     <link rel="stylesheet" href="css/contacts.css">
 
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -125,9 +127,54 @@
 
 	<!-- Map section -->
 	<section id="map" class="map">
-		<div class="map-container" id="map-container">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3231.589931697675!2d82.9101201147348!3d55.059349076039204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfe5a8d9e86a8d%3A0x525648118d23b076!2z0JfQsNC10LvRjNGG0L7QstGB0LrQsNGP!5e0!3m2!1sru!2sru!4v1513013910734" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<div id="map_canvas">
+			<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3231.589931697675!2d82.9101201147348!3d55.059349076039204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfe5a8d9e86a8d%3A0x525648118d23b076!2z0JfQsNC10LvRjNGG0L7QstGB0LrQsNGP!5e0!3m2!1sru!2sru!4v1513013910734" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe> -->
 		</div>
+		<script type="text/javascript">
+            window.onload = displayPosition(55.061762, 82.911340);
+            var sh=new Array();
+			var dg=new Array();
+		    //     function geoFindMe() {
+		    // 	if (navigator.geolocation){
+		    // 		navigator.geolocation.getCurrentPosition(displayPosition);
+		    // 	}else{
+		    // 		alert("Геолокация не поддерживается!");
+		    // 	}
+		    // }
+		    
+		    function displayPosition(pos){
+		    	// var myLat = pos.coords.latitude;
+		    	// var myLong = pos.coords.longitude;
+		    	var latlng = new google.maps.LatLng(55.061762, 82.911340);
+		    	var myOptions = {
+		    		scrollwheel: false,
+		    		zoom: 13,
+		    		center: latlng,
+		    		mapTypeId: google.maps.MapTypeId.ROADMAP
+		    		}; 
+		    	var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+		    	var image = {
+				  url: "img/map.png",
+				  size: new google.maps.Size(264, 64),
+				  origin: new google.maps.Point(-10, 0),
+				  anchor: new google.maps.Point(35, 55),
+				  scaledSize: new google.maps.Size(250, 64)
+				};
+		    	var marker = new google.maps.Marker({
+		    		position: latlng,
+		    		map: map,
+		    		title: "Мы здесь",
+		    		icon:image
+		    	});
+		        
+		    }
+		    
+		    
+		    function errorFunction(pos){
+		    	alert("Ошибка!");
+		    }
+		</script>
+
 	</section>
 
 	<!-- Clients -->
@@ -195,6 +242,9 @@
     <!-- Masked Input -->
     <script src="js/jquery.maskedinput.min.js"></script>
 	<!-- Маска для телефона -->
+
+	
+
    
     <script>
     jQuery(function($) {
