@@ -238,6 +238,31 @@
         </div>
     </footer>
 
+
+    <!-- Callback popup -->
+    <div id="callback-popup" class="popup-case popup">
+      <div class="popup-case_column">
+        <div class="popup-case_column_close">
+          <div class="popup-case_column_close-text">Закрыть</div>
+          <div class="popup-case_column_close-l"></div>
+          <div class="popup-case_column_close-x">Х</div>
+        </div>
+        <div class="popup-case_column_l"></div>
+        <div class="popup-case_column_content">
+          <h2 class="popup-case_column_header">Получите <span>бесплатную</span> консультацию</h2>
+          <p class="popup-case_column_p">Заполните поля ниже и наш менеджер свяжется с Вами в течение 3-ех минут.</p>
+          <form action="#">
+            <input class="popup-name-input" placeholder="Введите Ваше имя или Email" type="text">
+            <input class="popup-phone-input" placeholder="Введите Ваш телефон" type="text">
+            <button type="submit" class="calc-btn btn_animated" href="#">
+              <div class="btn_hover"></div>
+              <div class="btn_text">Получить консультацию</div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
     
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -301,5 +326,6 @@
       $('#phone-input').mask("+7           (999)          999-9999");
       })
     </script>
+    <script src="js/app.js"></script>
   </body>
 </html>

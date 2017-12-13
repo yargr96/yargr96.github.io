@@ -1365,6 +1365,61 @@ hr {
 	}
 }
 
+/* ====================== Popups ======================*/
+.popup {
+	background-color: rgba(7, 7, 7, .75);
+	&-case_column_header {
+		margin-bottom: 20px;
+		line-height: 43px;
+		span {
+			color: @base-blue;
+		}
+	}
+	&-case_column_p {
+		.stem-reg;
+		font-size: 14px;
+		color: @base-gray;
+		margin-bottom: 38px;
+	}
+	&-case_column_content {
+		width: 280px;
+	}
+	form {
+		input {
+			width: 245px;
+			background-color: transparent;
+			background-repeat: no-repeat;
+			background-position: 8px 4px;
+			border: none;
+			border-bottom: 1px solid #343434;
+			padding-left: 32px;
+			padding-bottom: 10px;
+			margin-bottom: 20px;
+			.stem-reg;
+			color: @base-gray;
+			&::-webkit-input-placeholder {color:#343434;}
+			&::-moz-placeholder          {color:#343434;}/* Firefox 19+ */
+			&:-moz-placeholder           {color:#343434;}/* Firefox 18- */
+			&:-ms-input-placeholder      {color:#343434;}
+			&:focus {
+				outline: none;
+			}
+		}
+		.popup-name-input {
+			background-image: url(../img/persone-blue.png);
+		}
+		.popup-phone-input {
+			background-image: url(../img/phone-blue.png);
+		}
+		button {
+			margin-top: 20px;
+			&:active, &:focus {
+				outline: none;
+			}
+		}
+	}
+}
+
 
 /* ====================== Media Queries ======================*/
 @media (max-width: 350px) {

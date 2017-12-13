@@ -30,6 +30,16 @@ $(document).ready(function() {
 		$('#case-6').css('display', 'block')
 					.animate({opacity: 1, left: 0}, 500)
 	});
+	$('a.calc-btn').click(function(event) {
+		event.preventDefault();
+		$('#calculate-popup').css('display', 'block')
+					.animate({opacity: 1, left: 0}, 500)
+	});
+	$('a.request').click(function(event) {
+		event.preventDefault();
+		$('#callback-popup').css('display', 'block')
+					.animate({opacity: 1, left: 0}, 500)
+	});
 	// Закрытие окна
 	$('.popup-case_column_close').click(function() {
 		$('.popup-case')
