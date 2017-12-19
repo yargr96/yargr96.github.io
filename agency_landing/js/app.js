@@ -40,9 +40,54 @@ $(document).ready(function() {
 		$('#callback-popup').css('display', 'block')
 					.animate({opacity: 1, left: 0}, 500)
 	});
+	$('a#hamburger').click(function(event) {
+		event.preventDefault();
+		$('.mobile-menu').css('display', 'block')
+					.animate({opacity: 1, left: 0}, 500)
+	});
+	$('a#question_1').click(function(event) {
+		event.preventDefault();
+		$('.service-popup_1').css('display', 'block')
+					.animate({opacity: 1, left: 0}, 500)
+	});
+	$('a#question_2').click(function(event) {
+		event.preventDefault();
+		$('.service-popup_2').css('display', 'block')
+					.animate({opacity: 1, left: 0}, 500)
+	});
+	$('a#question_3').click(function(event) {
+		event.preventDefault();
+		$('.service-popup_3').css('display', 'block')
+					.animate({opacity: 1, left: 0}, 500)
+	});
+	$('a#question_4').click(function(event) {
+		event.preventDefault();
+		$('.service-popup_4').css('display', 'block')
+					.animate({opacity: 1, left: 0}, 500)
+	});
 	// Закрытие окна
 	$('.popup-case_column_close').click(function() {
 		$('.popup-case')
+			.animate({opacity: 0, left: '100%'}, 500,
+				function() {
+					$(this).css('display', 'none');
+				}
+		);
+		$('.mobile-menu')
+			.animate({opacity: 0, left: '100%'}, 500,
+				function() {
+					$(this).css('display', 'none');
+				}
+		);
+		$('.service-popup')
+			.animate({opacity: 0, left: '100%'}, 500,
+				function() {
+					$(this).css('display', 'none');
+				}
+		);
+	});
+	$('.mobile-menu').click(function() {
+		$('.mobile-menu')
 			.animate({opacity: 0, left: '100%'}, 500,
 				function() {
 					$(this).css('display', 'none');

@@ -136,6 +136,67 @@ hr {
 			color: #9d9d9d;
 		}
 	}
+	.mobile-nav-row {
+		display: none;
+		width: 100%;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		z-index: 5;
+		.mobile-menu-button {
+			position: absolute;
+			left: 15px;
+			img {
+				width: 40px;
+			}
+		}
+		.mobile-phone {
+			position: absolute;
+			right: 15px;
+			img {
+				width: 40px;
+			}
+		}
+	}
+}
+
+.mobile-menu {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000;
+	z-index: 10;
+	display: none;
+	vertical-align: middle;
+	&-line {
+		height: 100%;
+		width: 0;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&-wrapper {
+		display: inline-block;
+		vertical-align: middle;
+		width: 98%;
+		ul {
+			li {
+				display: block;
+				text-align: center;
+				line-height: 1.5;
+				a {
+					font-size: 2em;
+					.stem-bold;
+					color: #c1c1c1;
+					transition: all .2s;
+					&:hover {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
 }
 // Колонка с телефоном
 .tel-collumn {
@@ -987,6 +1048,10 @@ hr {
 					position: relative;z-index: 2;
 					border: none;
 				}
+				.email-input {
+					background-image: url(../img/envelope.svg);
+					background-size: 12px;
+				}
 				button {
 					width: 275px;
 					margin-top: 4px;
@@ -1426,7 +1491,14 @@ hr {
 	body {
 		font-size: 10px;
 	}
+	.logo-col {
+		text-align: center;
+	}
+	.mobile-nav-row {
+		display: block !important;
+	}
 	.tel-collumn {
+		display: none;
 		line-height: 3;
 		.tel-number {
 			font-size: 10px !important;
@@ -1577,7 +1649,14 @@ hr {
 	body {
 		font-size: 10px;
 	}
+	.logo-col {
+		text-align: center;
+	}
+	.mobile-nav-row {
+		display: block !important;
+	}
 	.tel-collumn {
+		display: none;
 		.tel-number {
 			font-size: 14px;
 			line-height: 3;
@@ -1730,6 +1809,15 @@ hr {
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
+	.logo-col {
+		text-align: center;
+	}
+	.mobile-nav-row {
+		display: block !important;
+	}
+	.tel-collumn {
+		display: none;
+	}
 	.slider {
 		margin-top: 100px;
 		text-align: center;
@@ -1850,6 +1938,21 @@ hr {
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
+	.logo-col {
+		text-align: center;
+	}
+	.mobile-nav-row {
+		display: block !important;
+	}
+	.tel-collumn {
+		display: none;
+	}
+	.mobile-menu-button {
+		left: 50px !important;
+	}
+	.mobile-phone {
+		right: 50px !important;
+	}
 	.container {
 		width: auto;
 		margin: 0 50px;

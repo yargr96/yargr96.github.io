@@ -28,13 +28,27 @@
   <!-- Main section -->
 	<section id="main">
 		<div class="lang">
-          <a class="lang_a lang_a_active" href="#">Rus</a>
-          <span>/</span>
-          <a class="lang_a" href="#">Eng</a>
-        </div>
+      <a class="lang_a lang_a_active" href="#">Rus</a>
+      <span>/</span>
+      <a class="lang_a" href="#">Eng</a>
+    </div>
+
+    <!-- Навигация на мобильных -->
+    <div class="mobile-nav-row">
+      <div class="mobile-menu-button">
+        <a id="hamburger" href="javascript:void(0)">
+          <img src="img/menu.svg" alt="">
+        </a>
+      </div>
+      <div class="mobile-phone">
+        <a href="javascript:void(0)" class="request">
+          <img src="img/phone-receiver.svg" alt="">
+        </a>
+      </div>
+    </div>
 		<div class="container">
           <div class="row nav-row">
-            <div class="col-md-3 col-xs-6">
+            <div class="col-md-3 col-xs-12 col-sm-12 logo-col">
               <a href="index.html"><img src="img/logo.png" alt="Лого"></a>
             </div>
             <div class="col-md-6 menu-collumn hidden-xs hidden-sm">
@@ -216,11 +230,11 @@
             <div class="footer-col footer-col-3">
               <h4>НАВИГАЦИЯ:</h4>
               <ul>
-                <li><a href="#">Агентство</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Кейсы</a></li>
-                <li><a href="#">Контакты</a></li>
-                <li><a href="#">Новости</a></li>
+                <li><a href="index.html">Агентство</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="portfolio.html">Кейсы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="javascript:void(0)">Новости</a></li>
               </ul>
             </div>
             <div class="footer-col footer-col-4">
@@ -257,6 +271,25 @@
             </button>
           </form>
         </div>
+      </div>
+    </div>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu">
+      <div class="popup-case_column_close">
+        <div class="popup-case_column_close-text">Закрыть</div>
+        <div class="popup-case_column_close-l"></div>
+        <div class="popup-case_column_close-x">Х</div>
+      </div>
+      <div class="mobile-menu-line"></div>
+      <div class="mobile-menu-wrapper">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html">Агентство</a></li>
+          <li><a href="services.html">Услуги</a></li>
+          <li><a href="portfolio.html">Кейсы</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
       </div>
     </div>
 

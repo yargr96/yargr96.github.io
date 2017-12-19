@@ -183,10 +183,70 @@ hr {
 	height: 100vh;
 	position: relative;
 	min-height: 675px;
+	.mobile-nav-row {
+		display: none;
+		width: 100%;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		z-index: 5;
+		.mobile-menu-button {
+			position: absolute;
+			left: 15px;
+			img {
+				width: 40px;
+			}
+		}
+		.mobile-phone {
+			position: absolute;
+			right: 15px;
+			img {
+				width: 40px;
+			}
+		}
+	}
 	.containter {
 
 	}
 
+}
+.mobile-menu {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000;
+	z-index: 10;
+	display: none;
+	vertical-align: middle;
+	&-line {
+		height: 100%;
+		width: 0;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&-wrapper {
+		display: inline-block;
+		vertical-align: middle;
+		width: 98%;
+		ul {
+			li {
+				display: block;
+				text-align: center;
+				line-height: 1.5;
+				a {
+					font-size: 2em;
+					.stem-bold;
+					color: #c1c1c1;
+					transition: all .2s;
+					&:hover {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
 }
 // Навбар
 // Колонка с телефоном
@@ -457,7 +517,8 @@ hr {
 				border: none;
 			}
 			.email-input {
-				background-image: url(../img/persone.png);
+				background-image: url(../img/envelope.svg);
+				background-size: 12px;
 			}
 			button {
 				width: 275px;
@@ -913,7 +974,14 @@ footer {
 	body {
 		font-size: 10px;
 	}
+	.logo-col {
+		text-align: center;
+	}
+	.mobile-nav-row {
+		display: block !important;
+	}
 	.tel-collumn {
+		display: none;
 		line-height: 3;
 		.tel-number {
 			font-size: 10px !important;
@@ -981,7 +1049,14 @@ footer {
 	body {
 		font-size: 10px;
 	}
+	.logo-col {
+		text-align: center;
+	}
+	.mobile-nav-row {
+		display: block !important;
+	}
 	.tel-collumn {
+		display: none;
 		.tel-number {
 			font-size: 14px;
 			line-height: 3;
@@ -1057,6 +1132,15 @@ footer {
 	.contacts-row {
 		line-height: 21px;
 	}
+	.logo-col {
+		text-align: center;
+	}
+	.mobile-nav-row {
+		display: block !important;
+	}
+	.tel-collumn {
+		display: none;
+	}
 	footer {
 		position: relative !important;
 		// margin-top: 200px !important;
@@ -1097,6 +1181,21 @@ footer {
 		width: auto;
 		margin: 0 50px;
 		padding: 0;
+	}
+	.logo-col {
+		text-align: center;
+	}
+	.mobile-nav-row {
+		display: block !important;
+	}
+	.tel-collumn {
+		display: none;
+	}
+	.mobile-menu-button {
+		left: 50px !important;
+	}
+	.mobile-phone {
+		right: 50px !important;
 	}
 	.team-row-2 {
 		transform: translateX(0);
