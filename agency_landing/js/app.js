@@ -40,6 +40,15 @@ $(document).ready(function() {
 		$('#callback-popup').css('display', 'block')
 					.animate({opacity: 1, left: 0}, 500)
 	});
+	$('a.slider_item_link').click(function(event) {
+		event.preventDefault();
+		var caseNumber = $(this).data('case');
+		function openCase () {
+    		var test = $('#case-' + caseNumber).css('display', 'block')
+					.animate({opacity: 1, left: 0}, 500)
+    	}
+    	openCase();
+	});
 	$('a#hamburger').click(function(event) {
 		event.preventDefault();
 		$('.mobile-menu').css('display', 'block')
@@ -86,6 +95,7 @@ $(document).ready(function() {
 				}
 		);
 	});
+	// Мобильное меню
 	$('.mobile-menu').click(function() {
 		$('.mobile-menu')
 			.animate({opacity: 0, left: '100%'}, 500,
@@ -94,8 +104,20 @@ $(document).ready(function() {
 				}
 		);
 	});
-
+	// NiceScroll
     $(".popup-case_preview-i2").niceScroll({
         cursorcolor: "#f5c84a"
+    });
+    $('#slider_item_link-1').click(function() {
+    	alert('test');
+    })
+    // Смотреть
+    $('#watch').click(function() {
+    	var slideNumber = $('.slider-buttons_item_active').data('case');
+    	function openPopup () {
+    		var test = $('#case-' + slideNumber).css('display', 'block')
+					.animate({opacity: 1, left: 0}, 500)
+    	}
+    	openPopup();
     });
 });
