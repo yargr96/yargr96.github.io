@@ -40,6 +40,11 @@ $(document).ready(function() {
 		$('#callback-popup').css('display', 'block')
 					.animate({opacity: 1, left: 0}, 500)
 	});
+	$('a.get_consultation').click(function(event) {
+		event.preventDefault();
+		$('#callback-popup').css('display', 'block')
+					.animate({opacity: 1, left: 0}, 500)
+	});
 	$('a.slider_item_link').click(function(event) {
 		event.preventDefault();
 		var caseNumber = $(this).data('case');
@@ -120,4 +125,6 @@ $(document).ready(function() {
     	}
     	openPopup();
     });
+    
 });
+
