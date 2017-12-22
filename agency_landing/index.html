@@ -285,17 +285,17 @@
           <!-- Форма -->
           <div class="col-md-4 col-sm-6 footer-section_form-col">
             <div class="footer-section_form-col_form">
-              <form action="#">
+              <form class="index-form" action="php/form.php">
                 <!-- <p class="">Введите <span>Ваше имя</span> (необяз.):</p> -->
-                <input class="name-input" type="text" placeholder="Введите ваше имя">
+                <input name="name" class="name-input" type="text" placeholder="Введите ваше имя">
                 <!-- <p class="">Введите <span>Ваши телефон и email:</span></p> -->
-                <input id="phone-input" class="phone-input" type="tel" placeholder="+7           ( 999 )          999-99-99">
+                <input name="phone" id="phone-input" class="phone-input" type="tel" placeholder="+7           ( 999 )          999-99-99">
                 <div class="phone-bg">
                   <div class="phone-bg-item phone-bg-item-1"></div>
                   <div class="phone-bg-item phone-bg-item-2"></div>
                   <div class="phone-bg-item phone-bg-item-3"></div>
                 </div>
-                <input type="email" class="email-input" placeholder="Введите Ваш email">
+                <input name="email" type="email" class="email-input" placeholder="Введите Ваш email">
                 <button class="btn_animated" type="submit">
                   <div class="btn_hover"></div>
                   <div class="btn_text">Узнать условия акции</div></a>
@@ -675,9 +675,9 @@
         <div class="popup-case_column_content">
           <h2 class="popup-case_column_header"><span>Рассчитаем стоимость</span> Вашего проекта</h2>
           <p class="popup-case_column_p">Заполните поля ниже и наш менеджер свяжется с Вами в течение 3-ех минут.</p>
-          <form action="#">
-            <input class="popup-name-input" placeholder="Введите Ваше имя или Email" type="text">
-            <input class="popup-phone-input" placeholder="Введите Ваш телефон" type="text">
+          <form class="calculate-form" action="php/form.php">
+            <input name="name" class="popup-name-input" placeholder="Введите Ваше имя или Email" type="text">
+            <input name="phone" class="popup-phone-input" placeholder="Введите Ваш телефон" type="text">
             <button type="submit" class="calc-btn btn_animated" href="#">
               <div class="btn_hover"></div>
               <div class="btn_text">Получить оценку проекта</div>
@@ -699,9 +699,9 @@
         <div class="popup-case_column_content">
           <h2 class="popup-case_column_header">Получите <span>бесплатную</span> консультацию</h2>
           <p class="popup-case_column_p">Заполните поля ниже и наш менеджер свяжется с Вами в течение 3-ех минут.</p>
-          <form action="#">
-            <input class="popup-name-input" placeholder="Введите Ваше имя или Email" type="text">
-            <input class="popup-phone-input" placeholder="Введите Ваш телефон" type="text">
+          <form class="call-form" action="php/form.php">
+            <input name="name" class="popup-name-input" placeholder="Введите Ваше имя или Email" type="text">
+            <input name="phone" class="popup-phone-input" placeholder="Введите Ваш телефон" type="text">
             <button type="submit" class="calc-btn btn_animated" href="#">
               <div class="btn_hover"></div>
               <div class="btn_text">Получить консультацию</div>
@@ -849,6 +849,8 @@
       })
       
     </script>
+
+    <script src="js/mail.js"></script>
       
     <!-- Main script -->
     <!-- <script src="js/main.js"></script> -->
