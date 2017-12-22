@@ -1208,7 +1208,8 @@ hr {
 	left: 100%;
 	top: 0;
 	bottom: 0;
-	height: 100vh;
+	height: auto;
+	overflow-y: auto;
 	width: 100%;
 	// background-color: #aeaeae;
 	z-index: 10;
@@ -1293,6 +1294,7 @@ hr {
 		float: right;
 		width: 450px;
 		height: 100%;
+		min-height: 550px;
 		z-index: 2;
 		background-color: #070707;
 		position: relative;
@@ -1440,7 +1442,6 @@ hr {
 	}
 }
 
-/* ====================== Popups ======================*/
 .popup {
 	background-color: rgba(7, 7, 7, .75);
 	&-case_column_header {
@@ -1635,6 +1636,9 @@ hr {
 	}
 	
 	// Popup
+	.popup {
+		background-color: #070707;	
+	}
 	.popup-case_link {
 		display: inline-block;
 	}
@@ -1642,7 +1646,7 @@ hr {
 		width: 100%;
 	}
 	.popup-case_column_close {
-		right: 15px;
+		right: 25px;
 	}
 	.popup-case_column_content {
 		margin-left: 15px;
@@ -1829,6 +1833,10 @@ hr {
 	}
 	.popup-case_enlarge {
 		display: none;
+	}
+	// Popup
+	.popup {
+		background-color: #070707;	
 	}
 }
 

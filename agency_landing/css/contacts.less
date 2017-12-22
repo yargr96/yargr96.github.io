@@ -749,7 +749,8 @@ footer {
 	left: 100%;
 	top: 0;
 	bottom: 0;
-	height: 100vh;
+	height: auto;
+	overflow: auto;
 	width: 100%;
 	// background-color: #aeaeae;
 	z-index: 5;
@@ -834,6 +835,7 @@ footer {
 		float: right;
 		width: 450px;
 		height: 100%;
+		min-height: 550px;
 		z-index: 2;
 		background-color: #070707;
 		position: relative;
@@ -1102,6 +1104,38 @@ footer {
 	.contacts-sect_form-col form button {
 		width: 235px;
 	}
+	// Popup
+	.popup {
+		background-color: #070707;	
+	}
+	.popup-case_link {
+		display: inline-block;
+	}
+	.popup-case_column {
+		width: 100%;
+	}
+	.popup-case_column_close {
+		right: 25px;
+	}
+	.popup-case_column_content {
+		margin-left: 15px;
+		position: absolute;
+		top: 50%;
+		margin-top: -175px;
+	}
+	.popup-case_column_icons {
+		padding-left: 15px;
+		white-space: nowrap;
+	}
+	.popup-case_column_header {
+		font-size: 30px;
+	}
+	.popup-case_column_icons-like {
+		padding-right: 15px;
+	}
+	.popup-case_enlarge {
+		display: none;
+	}
 }
 @media (min-width: 351px) and (max-width: 480px) {
 	body {
@@ -1228,6 +1262,39 @@ footer {
 	.contacts-sect_form-col form button {
 		width: 235px;
 	}
+	// Popup
+	.popup-case_link {
+		display: inline-block;
+	}
+	.popup-case_column {
+		width: 100%;
+	}
+	.popup-case_column_close {
+		right: 25px;
+	}
+	.popup-case_column_content {
+		margin-left: 25px;
+		position: absolute;
+		top: 50%;
+		margin-top: -175px;
+	}
+	.popup-case_column_icons {
+		padding-left: 25px;
+		white-space: nowrap;
+	}
+	.popup-case_column_header {
+		font-size: 30px;
+	}
+	.popup-case_column_icons-like {
+		padding-right: 25px;
+	}
+	.popup-case_enlarge {
+		display: none;
+	}
+	// Popup
+	.popup {
+		background-color: #070707;	
+	}
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -1297,6 +1364,23 @@ footer {
 		span {
 			font-size: 22px;
 		}
+	}
+	// Popup
+	.popup-case_link {
+		display: inline-block;
+	}
+	.popup-case_column {
+		width: 100%;
+	}
+
+	.popup-case_column_header {
+		font-size: 30px;
+	}
+	.popup-case_preview-i {
+		display: none;
+	}
+	.popup-case_enlarge {
+		display: none;
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
