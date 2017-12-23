@@ -79,6 +79,7 @@
 html, body {
 	// background-color: #101010;
 	position: relative;
+	overflow-x: hidden;
 
 }
 
@@ -353,9 +354,15 @@ hr {
 		z-index: 2;
 	}
 }
+.main-content-wrapper {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+}
 // Полоска с основным контентом
 .main-content-row {
-	margin-top: 125px;
+	// margin-top: 125px;
 	.main-content {
 		padding-left: 66px;
 		h1 {
@@ -499,12 +506,14 @@ hr {
 //Круги
 .round-container {
 	position: absolute;
-	top: 0;
+	top: -217px;
+	right: -35px;
+	height: 0;
 	width: 100%;
-	height: 100vh;
+	// height: 100vh;
 	min-height: 675px;
-	z-index: 2;
-	overflow: hidden;
+	z-index: 0;
+	// overflow: hidden;
 	.container {
 		height: 100%;
 	}
@@ -1990,12 +1999,18 @@ hr {
 		margin: 0 50px;
 		padding: 0;
 	}
+	.round-container {
+		top: -242px;
+	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 	.container {
 		width: auto;
 		margin: 0 50px;
 		padding: 0;
+	}
+	.round-container {
+		top: -242px;
 	}
 }
 @media (min-width: 1200px) and (max-width: 1600px) {
@@ -2027,7 +2042,7 @@ hr {
 		// font-size: 14px !important;
 	}
 	.main-content {
-		padding-top: 60px;
+		// padding-top: 60px;
 		h1 {
 			font-size: 44px !important;
 		}
@@ -2042,11 +2057,12 @@ hr {
 			}
 		}
 	}
-	.slider {
+	/* .slider {
 		padding-top: 60px;
-	}
-	.round-container {
-		padding-top: 60px;
-	}
+	} */
+	 .round-container {
+		// padding-top: 60px;
+		top: -241px;
+	} 
 
 }
