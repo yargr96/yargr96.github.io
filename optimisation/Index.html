@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>WebExtremum</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="./Css/style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="./Js/plotly-latest.min.js"></script>
+      <script src="./Js/contour.js" charset="utf-8"></script>
+      <script src="./Js/surface.js" charset="utf-8"></script>
+      <script src="./Js/script.js" charset="utf-8"></script>
+   </head>
+   <body>
+      <div class="container main-form">
+         <div class="row">
+            <div class="col-xs-12">
+               <h1>Objective function: <strong>(x - 1) * cos(3.14 * (x <sup>2</sup> + y <sup>2</sup>)<sup>0.5</sup>)</strong></h1>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-6 line">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <h4>Central Data</h4>
+                  </div>
+                  <div class="col-sm-6">
+                     <form>
+                        <div class="form-group">
+                           <label for="x_start">X start coordinate</label>
+                           <input type="text" class="form-control" id="x_start" value="-3.2">
+                        </div>
+                        <div class="form-group">
+                           <label for="x_end">X end coordinate</label>
+                           <input type="text" class="form-control" id="x_end" value="-2.8">
+                        </div>
+                        <div class="form-group">
+                           <label for="x_step">X step</label>
+                           <input type="text" class="form-control" id="x_step" value="0.05">
+                        </div>
+                     </form>
+                  </div>
+                  <div class="col-sm-6">
+                     <form>
+                        <div class="form-group">
+                           <label for="y_start">Y start coordinate</label>
+                           <input type="text" class="form-control" id="y_start" value="-0.5">
+                        </div>
+                        <div class="form-group">
+                           <label for="y_end">Y end coordinate</label>
+                           <input type="text" class="form-control" id="y_end" value="0.5">
+                        </div>
+                        <div class="form-group">
+                           <label for="x_step">Y step</label>
+                           <input type="text" class="form-control" id="y_step" value="0.05">
+                        </div>
+                     </form>
+                  </div>
+                  <div class="btn-group">
+                     <button type="button" class="btn btn-default" onclick="contour()">Contour</button>
+                     <button type="button" class="btn btn-default" onclick="surface()">Surface</button>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-6">
+               <h4>Point Data</h3>
+               <div class="row">
+                  <div class="col-sm-6">
+                     <form >
+                        <div class="form-group">
+                           <label for="x_point">X start point</label>
+                           <input type="text" class="form-control" id="x_point" value="-2">
+                        </div>
+                        <div class="form-group">
+                           <label for="step">Step</label>
+                           <input type="text" class="form-control" id="step" value="0.05">
+                        </div>
+                        <div>
+                           <select id="type_func">
+                              <option value="Global" selected>GlobalSearch</option>
+                              <option value="Search">Search</option>
+                              <option value="Divide">Divide</option>
+                              <option value="Ex">Ex</option>
+                           </select>
+                        </div>
+                     </form>
+                  </div>
+                  <div class="col-sm-6">
+                     <form>
+                        <div class="form-group">
+                           <label for="y_point">Y start point</label>
+                           <input type="text" class="form-control" id="y_point" value="1">
+                        </div>
+                        <label for="type_extremum">Type extremum</label>
+                        <div class="dropdown">
+                           <select id="type_extr">
+                              <option value="Maximum" selected>Maximum</option>
+                              <option value="Minimum">Minimum</option>
+                           </select>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-6" id="divCr" >
+                     <label for="type_extremum">Type Cr</label>
+                     <div class="dropdown">
+                        <select id="type_cr">
+                           <option value="Steps" selected>Max steps</option>
+                           <option value="Eps">Eps</option>
+                           <option value="Func">Max for</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="col-sm-6" id="divVal">
+                     <label for="type_extremum">Value of Criteries</label>
+                     <input type="text" class="form-control" id="value_of_kr" value="1">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-xs-12">
+               <button type="button" class="btn btn-default" name="button" onclick="Search()" id="mainbutton">Search</button>
+            </div>
+
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-12">
+               <div class="row">
+                  <p id="result"></p>
+               </div>
+               <div class="row"  id="graphic">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- <div class="container text-left" id="main-part">
+         <br><br>
+         <div class="row">
+            <div class="col-sm-4">
+               <div class="panel-group" id="accordion">
+                  <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <h4 class="panel-title">
+                           <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Central Data</a>
+                        </h4>
+                     </div>
+                     <div id="collapse1" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                           <div class="col-sm-6">
+                              <form>
+                                 <div class="form-group">
+                                    <label for="x_start">X start coordinate</label>
+                                    <input type="text" class="form-control" id="x_start" value="-3.2">
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="x_end">X end coordinate</label>
+                                    <input type="text" class="form-control" id="x_end" value="-2.8">
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="x_step">X step</label>
+                                    <input type="text" class="form-control" id="x_step" value="0.05">
+                                 </div>
+                              </form>
+                           </div>
+                           <div class="col-sm-6">
+                              <form>
+                                 <div class="form-group">
+                                    <label for="y_start">Y start coordinate</label>
+                                    <input type="text" class="form-control" id="y_start" value="-0.5">
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="y_end">Y end coordinate</label>
+                                    <input type="text" class="form-control" id="y_end" value="0.5">
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="x_step">Y step</label>
+                                    <input type="text" class="form-control" id="y_step" value="0.05">
+                                 </div>
+                              </form>
+                           </div>
+                           <div class="btn-group col-sm-offset-6">
+                              <button type="button" class="btn btn-default" onclick="contour()">Contour</button>
+                              <button type="button" class="btn btn-default" onclick="surface()">Surface</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <h4 class="panel-title">
+                           <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                           Point Data</a>
+                        </h4>
+                     </div>
+                     <div id="collapse2" class="panel-collapse collapse">
+                        <div class="panel-body">
+                           <div class="row">
+                              <div class="col-sm-6">
+                                 <form >
+                                    <div class="form-group">
+                                       <label for="x_point">X start point</label>
+                                       <input type="text" class="form-control" id="x_point" value="-2">
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="step">Step</label>
+                                       <input type="text" class="form-control" id="step" value="0.05">
+                                    </div>
+                                    <div>
+                                       <select id="type_func">
+                                          <option value="Global" selected>GlobalSearch</option>
+                                          <option value="Search">Search</option>
+                                          <option value="Divide">Divide</option>
+                                          <option value="Ex">Ex</option>
+                                       </select>
+                                    </div>
+                                 </form>
+                              </div>
+                              <div class="col-sm-6">
+                                 <form>
+                                    <div class="form-group">
+                                       <label for="y_point">Y start point</label>
+                                       <input type="text" class="form-control" id="y_point" value="1">
+                                    </div>
+                                    <label for="type_extremum">Type extremum</label>
+                                    <div class="dropdown">
+                                       <select id="type_extr">
+                                          <option value="Maximum" selected>Maximum</option>
+                                          <option value="Minimum">Minimum</option>
+                                       </select>
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-sm-6" id="divCr" >
+                                 <label for="type_extremum">Type Cr</label>
+                                 <div class="dropdown">
+                                    <select id="type_cr">
+                                       <option value="Steps" selected>Max steps</option>
+                                       <option value="Eps">Eps</option>
+                                       <option value="Func">Max for</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class="col-sm-6" id="divVal">
+                                 <label for="type_extremum">Value of Criteries</label>
+                                 <input type="text" class="form-control" id="value_of_kr" value="1">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <button type="button" class="btn btn-default" name="button" onclick="Search()" id="mainbutton">Search</button>
+               </div>
+            </div>
+            <div class="col-sm-8">
+               <div class="row"  id="graphic">
+               </div>
+               <div class="row">
+                  <p id="result"></p>
+               </div>
+            </div>
+         </div>
+      </div> -->
+   </body>
+</html>

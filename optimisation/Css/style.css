@@ -1,0 +1,62 @@
+* {
+    text-align: center;
+}
+h1 {
+    font-size: 26px;
+}
+#main-part{
+    height: 620px;
+    /*background-color: rgb(67, 69, 77);*/
+    border: 1px solid green;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.main-form {
+    border: 1px solid green;
+    border-radius: 5px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+}
+
+.line {
+    position: relative;
+}
+
+.line:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    bottom: 15px;
+    right: 0;
+    width: 1px;
+    background-color: green;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+#butn {
+    background-color: rgb(154, 154, 154);
+}
+
+#mainbutton{
+    padding: 10px 30px;
+    margin-top: 20px;
+}
+
+select {
+    height: 30px;
+    border-radius: 5pt;
+}
+
+select:focus {
+    outline: none;
+}
+
+.panel {
+    /*border-color: green;*/
+}
+.svg-container {
+    margin: 0 auto !important;
+}
