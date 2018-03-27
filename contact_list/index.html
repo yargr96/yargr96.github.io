@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Lessons</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="contact-list">
+		<h1 class="contact-list__header">Список контактов</h1>
+		<input type="text" class="contact-list__input" placeholder="Поиск...">
+		<div class="contacts__wrap">
+			<!-- <div class="contact-list__item contact clearfix">
+				<img src="https://pp.userapi.com/c846122/v846122630/12e0/syE4M4cLYzc.jpg" class="contact__img"></img>
+				<div class="contact__name">Настя</div>
+				<div class="contact__number">+79112668643</div>
+			</div> -->
+		</div>
+	</div>
+
+	<div class="btns-container">
+		<button id="add-btn" class="btn">Добавить контакт</button>
+		<button id="clear-btn" class="btn">Сбросить список контактов</button>
+	</div>
+	
+	<div class="add-contact-popup">
+		<div class="add-contact">
+			<h2 class="add-contact__header">Добавить контакт</h2>
+			<input type="text" class="add-contact__name" placeholder="Имя">
+			<input type="text" class="add-contact__phone" placeholder="Номер телефона">
+			<input type="text" class="add-contact__img" placeholder="URL картинки">
+			<button class="add-contact__btn btn">Добавить</button>
+		</div>
+	</div>
+
+	<div class="edit-contact-popup">
+		<div class="edit-contact">
+			<div class="edit-contact__img"></div>
+			<input class="edit-contact__name-input" placeholder="Имя"></input>
+			<input class="edit-contact__phone-input" placeholder="Телефон"></input>
+			<input class="edit-contact__img-input" placeholder="URL картинки"></input>
+			<button class="btn edit-contact__edit-btn">Изменить контакт</button>
+			<button class="btn edit-contact__delete-btn">Удалить контакт</button>
+		</div>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html>
