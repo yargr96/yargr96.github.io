@@ -142,7 +142,7 @@ function renderProducts() {
         rawFile.send(null);
     }
 
-    readTextFile("../products.json", function(text){
+    readTextFile("https://yargr96.github.io/frontend_test/src/products.json", function(text){
         var data = JSON.parse(text);
         for (var i = 0; i < data.length; i++) {
             var product = new Product();
