@@ -1,0 +1,33 @@
+body {
+	min-width: 320px;
+}
+
+.column_right {
+	margin: 5px auto;
+	float: none;
+}
+
+.ng-binding {
+	user-select: none;
+}
+
+@media (max-width: 999px) and (min-width: 426px) {
+	.sub_category_page .column_right_products_container {
+		width: 750px;
+		float: none;
+	}
+}
+
+@media (max-width: 425px) and (min-width: 0px) {
+	.sub_category_page .column_right_products_container {
+		width: 100%;
+		float: none;
+	}
+	.product_horizontal {
+		float: none;
+		margin: 10px auto;
+	}
+	.container {
+		width: 100vw;
+	}
+}
